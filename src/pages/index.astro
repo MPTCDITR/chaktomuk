@@ -1,25 +1,39 @@
 ---
-import '../styles/global.css';
-// Component Imports
-import Button from '../components/Button.astro';
+// src/pages/index.astro
+// This file assembles all your components into the final homepage.
 
-// Full Astro Component Syntax:
-// https://docs.astro.build/basics/astro-components/
+// Import the main layout wrapper
+import Header from '@/components/layout/header.astro';
+import Layout from '../layouts/Layout.astro';
+import Hero from '@/components/layout/hero.astro';
+import Stats from '@/components/layout/Stats.astro';
+import TrustedBy from '@/components/layout/TrustedBy.astro';
+import Feature from '@/components/layout/Feature.astro';
+import About from '@/components/layout/about.astro';
+import Footer from '@/components/layout/footer.astro';
+import WhyUs from '@/components/layout/whyUs.astro';
+
+// Import all the section components you created
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro + TailwindCSS</title>
-	</head>
+<Layout title="Chaktomuk Digital Platform">
+  
+  <!-- The Header component goes at the top -->
+  <Header/>
 
-	<body>
-		<div class="grid place-items-center h-screen content-center">
-			<Button>Tailwind Button in Astro!</Button>
-			<a href="/markdown-page" class="p-4 underline">Markdown is also supported...</a>
-		</div>
-	</body>
-</html>
+  <main>
+    <!-- Arrange all the body content components in order -->
+    <Hero/>
+    <Stats/>
+    <TrustedBy />
+    <Feature />
+    <WhyUs/>
+    
+    <About />
+  </main>
+
+  <!-- The Footer component goes at the bottom -->
+  <Footer />
+
+</Layout>
