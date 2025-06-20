@@ -3,37 +3,34 @@
 // This file assembles all your components into the final homepage.
 
 // Import the main layout wrapper
-import Header from '@/components/layout/header.astro';
-import Layout from '../layouts/Layout.astro';
-import Hero from '@/components/layout/hero.astro';
-import Stats from '@/components/layout/Stats.astro';
-import TrustedBy from '@/components/layout/TrustedBy.astro';
-import Feature from '@/components/layout/Feature.astro';
-import About from '@/components/layout/about.astro';
-import Footer from '@/components/layout/footer.astro';
-import WhyUs from '@/components/layout/whyUs.astro';
+import Header from "@/components/layout/Header.astro";
+import Layout from "../layouts/Layout.astro";
+import Hero from "@/components/layout/Hero.astro";
+import Stats from "@/components/layout/Stats.astro";
+import TrustedBy from "@/components/layout/TrustedBy.astro";
+import Feature from "@/components/layout/Feature.astro";
+import Footer from "@/components/layout/Footer.astro";
+import About from "@/components/layout/About.astro";
+import WhyUs from "@/components/layout/WhyUs.astro";
 
 // Import all the section components you created
-
 ---
 
 <Layout title="Chaktomuk Digital Platform">
-  
   <!-- The Header component goes at the top -->
-  <Header/>
+  <Header />
 
   <main>
     <!-- Arrange all the body content components in order -->
-    <Hero/>
-    <Stats/>
+    <Hero />
+    <Stats />
     <TrustedBy />
     <Feature />
-    <WhyUs/>
-    
+    <WhyUs />
+
     <About />
   </main>
 
   <!-- The Footer component goes at the bottom -->
   <Footer />
-
 </Layout>
