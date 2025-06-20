@@ -1,16 +1,18 @@
 ---
 // src/components/Hero.astro
+import { Image } from "astro:assets"
+import homepage from "@/assets/images/homepage.jpg"
 ---
 
-<section class="py-20 md:py-28 bg-white text-center font-kantumruy">
+<section class="py-20 md:py-28 bg-white text-center font-sans">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <h1 class="text-5xl text-black font-semibold gap-y-10 mb-6">
       Chaktomuk Digital <span class="bg-primary text-white px-3 rounded-xl"
-        >Platform</span
+        >Platform </span
       >
     </h1>
     <p
-      class="text-sm text-slate-600 sm:text-sm font-normalmax-w-2xl mx-auto mb-8"
+      class="text-sm text-slate-600 sm:text-sm font-normal max-w-2xl mx-auto mb-8"
     >
       Chaktomuk is a robust digital workspace created by the Ministry of Post
       and Telecommunications (MPTC) to enhance government efficiency in
@@ -20,9 +22,9 @@
     </p>
   </div>
 
-  <img
-    src="/images/banner/homepage.jpg"
-    alt="Chaktomuk Digital Platform on multiple devices"
+  <Image
+    src= {homepage}
+    alt="Chaktomuk Digital homepage"
     class="mt-15 mx-auto w-full max-w-full"
   />
 </section>
