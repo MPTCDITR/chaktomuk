@@ -1,16 +1,12 @@
-@import 'tailwindcss';
+@import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap");
+@import "tailwindcss";
 @import "tw-animate-css";
-
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-
 
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-kantumruy: "Kantumruy Pro", sans-serif; 
+  --font-sans: "Kantumruy Pro", san-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -49,7 +45,6 @@
 }
 
 :root {
-  --box:#1C4676;
   --white: oklch(1 0 0);
   --black: oklch(0.2435 0 0);
   --radius: 0.625rem;
@@ -128,4 +123,3 @@
     @apply bg-background text-foreground;
   }
 }
-

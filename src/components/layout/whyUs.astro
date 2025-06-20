@@ -1,11 +1,12 @@
 ---
 // Import necessary components at the top.
 import { Image } from 'astro:assets'; 
+import whyus from "@/assets/images/why_us.png"
 import { ChartNoAxesCombined, ListTodo, ScrollText } from 'lucide-react';
 ---
 
 <section class="py-16 md:py-24">
-  <div class="max-w-7xl mx-auto px-4">
+  <div class="max-w-7xl mx-auto px-4 font-sans">
 
     <div class="text-center max-w-3xl mx-auto">
       <h2 class="text-primary text-4xl md:text-5xl font-semibold mb-4">
@@ -20,7 +21,7 @@ import { ChartNoAxesCombined, ListTodo, ScrollText } from 'lucide-react';
 
       <div class="lg:col-span-7">
         <Image 
-          src="/Y_Us.png" 
+          src={whyus} 
           alt="A mockup of the Chaktomuk platform interface" 
           class="w-full h-auto"
           width={800} 

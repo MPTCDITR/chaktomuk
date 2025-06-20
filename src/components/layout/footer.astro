@@ -1,16 +1,18 @@
 ---
 // src/components/Footer.astro
 import { Image } from 'astro:assets';
+import ctm from "@/assets/logo/logo-ctm_white.png"
+import dgc from "@/assets/logo/logo-mptc.png"
 import { Facebook, Linkedin, Mail, MapPin, Send, Twitter, Youtube } from 'lucide-react';
 ---
-<footer id="contact" class="bg-primary text-slate-300">
+<footer id="contact" class="bg-primary text-slate-300 font-sans">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
       <!-- Chaktomuk logo -->
       <div class="col-span-2 flex justify-center md:col-span-1 md:justify-start">
         <a href="/" class="mb-4">
           <Image 
-            src={"/footer-logo.png"} 
+            src={ctm} 
             alt="Chaktomuk Logo"
             width={225}
             height={63}
@@ -74,7 +76,7 @@ import { Facebook, Linkedin, Mail, MapPin, Send, Twitter, Youtube } from 'lucide
     <div class="flex items-center gap-2">
       <span class="text-sm text-">Power By</span>
       <Image
-       src="/logo-mptc.png" 
+       src={dgc}
        alt="DGC Logo" 
        class=""
        width={51}

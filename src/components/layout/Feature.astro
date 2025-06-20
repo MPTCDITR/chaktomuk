@@ -1,17 +1,20 @@
 ---
 // src/components/Features.astro
 import Image from "astro/components/Image.astro"
+import design from "@/assets/images/design.png"
+import automate from "@/assets/images/automate.png"
+import analytic from "@/assets/images/analytic.png"
 ---
 <section id="features" class="py-20 bg-white">
-    <div class=" mx-auto px-4 sm:px-6 lg:px-8 text-center font-kantumruy">
+    <div class=" mx-auto px-4 sm:px-6 lg:px-8 text-center font-sans">
       <h2 class="text-4xl md:text-4xl font-semibold mb-12 text-primary ">Our Features</h2>
       <p class="text-base text-slate-600 font-normal mb-9">Chaktomuk is a secure digital platform designed for government entities, offering vital tools for streamlining workflows, automating tasks, and analyzing operations.</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 ">
         
           <div class="relative mb-6 max-w-sm mx-auto ">
             <Image 
-            src="/Design-copy.png" 
-            alt="Description of image" 
+            src={design}
+            alt="Desing image" 
             class="w-full h-auto rounded-lg" 
             width={330}
             height={354} />
@@ -28,7 +31,7 @@ import Image from "astro/components/Image.astro"
 
           <div class="relative mb-6  max-w-sm mx-auto ">
             <Image 
-            src="/Automate-copy.png" 
+            src={automate}
             alt="Description of image" 
             class="w-full h-auto rounded-lg" 
             width={330}
@@ -45,7 +48,7 @@ import Image from "astro/components/Image.astro"
 
           <div class="relative mb-6 max-w-sm mx-auto ">
             <Image 
-            src="/Analytic-copy.png" 
+            src={analytic}
             alt="Analytic_image" 
             class="w-full h-auto rounded-lg" 
             width={330}

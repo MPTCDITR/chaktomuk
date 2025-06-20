@@ -3,6 +3,7 @@
 
 // 1. Corrected the Image import to use the modern 'astro:assets'
 import { Image } from 'astro:assets';
+import mptc from "@/assets/images/mptc.jpg"
 ---
 
 <section class="py-16 md:py-24">
@@ -18,8 +19,8 @@ import { Image } from 'astro:assets';
       
       <div class="lg:order-2">
         <Image
-          src={"/mptc.jpg"}
-          alt="The Ministry of Post and Telecommunications building in Phnom Penh"
+          src={mptc}
+          alt="MPTC building"
           class="w-full h-auto rounded-2xl"
           width={410}
           height={342} 
