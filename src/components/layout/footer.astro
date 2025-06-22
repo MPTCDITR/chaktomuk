@@ -1,18 +1,29 @@
 ---
 // src/components/Footer.astro
-import { Image } from 'astro:assets';
-import ctm from "@/assets/logo/logo-ctm_white.png"
-import dgc from "@/assets/logo/logo-mptc.png"
-import { Facebook, Linkedin, Mail, MapPin, Send, Twitter, Youtube } from 'lucide-react';
+import { Image } from "astro:assets";
+import ctm from "@/assets/logo/logo-ctm_white.png";
+import dgc from "@/assets/logo/logo-mptc.png";
+import {
+  Facebook,
+  Linkedin,
+  Mail,
+  MapPin,
+  Send,
+  Twitter,
+  Youtube,
+} from "lucide-react";
 ---
+
 <footer id="contact" class="bg-primary text-slate-300 font-sans">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
     <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
       <!-- Chaktomuk logo -->
-      <div class="col-span-2 flex justify-center md:col-span-1 md:justify-start">
+      <div
+        class="col-span-2 flex justify-center md:col-span-1 md:justify-start"
+      >
         <a href="/" class="mb-4">
-          <Image 
-            src={ctm} 
+          <Image
+            src={ctm}
             alt="Chaktomuk Logo"
             width={225}
             height={63}
@@ -23,9 +34,25 @@ import { Facebook, Linkedin, Mail, MapPin, Send, Twitter, Youtube } from 'lucide
       <!-- information -->
       <div>
         <h3 class="font-bold text-white mb-4">Other Links</h3>
-         <ul class="space-y-2">
-          <li><a href="https://mptc.gov.kh/en/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Ministry Of Post And Telecommunication</a></li>
-          <li><a href="https://www.dgc.gov.kh/en" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Digital Government Committee</a></li>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="https://mptc.gov.kh/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-white transition-colors"
+              >Ministry Of Post And Telecommunication</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.dgc.gov.kh/en"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-white transition-colors"
+              >Digital Government Committee</a
+            >
+          </li>
         </ul>
       </div>
       <!-- Contact Us  -->
@@ -34,57 +61,64 @@ import { Facebook, Linkedin, Mail, MapPin, Send, Twitter, Youtube } from 'lucide
         <ul class="space-y-3">
           <li class="flex items-center gap-2">
             <Mail className="text-white" size={20} strokeWidth={2} />
-            <a href="mailto:support@dgc.gov.kh" class="hover:text-white transition-colors">support@dgc.gov.kh</a>
+            <a
+              href="mailto:support@dgc.gov.kh"
+              class="hover:text-white transition-colors">support@dgc.gov.kh</a
+            >
           </li>
           <li class="flex items-start gap-2">
-            <MapPin className="text-white mt-1 flex-shrink-0" size={20} strokeWidth={2} />
-            <span class="leading-relaxed">Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh, Phnom Penh, Cambodia, 120210</span>
+            <MapPin
+              className="text-white mt-1 flex-shrink-0"
+              size={20}
+              strokeWidth={2}
+            />
+            <span class="leading-relaxed"
+              >Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh,
+              Phnom Penh, Cambodia, 120210</span
+            >
           </li>
         </ul>
       </div>
-    </div> 
+    </div>
 
     <!-- socialmeadia icons -->
-    <div class="flex place-content-end gap-4 mt-12">
-      <a href="#" aria-label="LinkedIn" class="text-slate-400 hover:text-white transition-colors">
-        <Linkedin size={20} strokeWidth={2} />
+    <div class="flex place-content-end gap-5 mt-12">
+      <a href="#" aria-label="LinkedIn" class="text-white">
+        <Linkedin size={24} strokeWidth={2} />
       </a>
-      <a href="#" aria-label="Twitter" class="text-slate-400 hover:text-white transition-colors">
-        <Twitter size={20} strokeWidth={2} />
+      <a href="#" aria-label="Twitter" class="text-white">
+        <Twitter size={24} strokeWidth={2} />
       </a>
-      <a href="#" aria-label="Telegram" class="text-slate-400 hover:text-white transition-colors">
-        <Send size={20} strokeWidth={2} />
+      <a href="#" aria-label="Telegram" class="text-white">
+        <Send size={24} strokeWidth={2} />
       </a>
-      <a href="#" aria-label="YouTube" class="text-slate-400 hover:text-white transition-colors">
-        <Youtube size={20} strokeWidth={2} />
+      <a href="#" aria-label="YouTube" class="text-white">
+        <Youtube size={24} strokeWidth={2} />
       </a>
-      <a href="#" aria-label="Facebook" class="text-slate-400 hover:text-white transition-colors">
-        <Facebook size={20} strokeWidth={2} />
+      <a href="#" aria-label="Facebook" class="text-white">
+        <Facebook size={24} strokeWidth={2} />
       </a>
     </div>
   </div>
-  {/* Bottom Bar Section */}
-<div class="p-4 border-t-2  ">
-  <div class=" mx-auto px-4  flex  justify-between items-center gap-4">
-    
-    {/* This is the first item, so it goes to the LEFT */}
-    <p class="text-sm text-white text-left">
+
+  <div class="p-4 border-t-2 border-white">
+    <div
+      class="max-w-7xl mx-auto flex flex-col md:items-center gap-4 md:flex-row md:justify-between"
+    >
+      <p class="text-xs md:text-base text-white text-right md:text-left">
         @2025 Ministry Of Post And Telecommunications
-    </p>
+      </p>
 
-    {/* This is the last item, so it goes to the RIGHT */}
-    <div class="flex items-center gap-2">
-      <span class="text-sm text-">Power By</span>
-      <Image
-       src={dgc}
-       alt="DGC Logo" 
-       class=""
-       width={51}
-       height={51}
-       >
+      <div class="flex items-center gap-2 place-self-end">
+        <span class="text-xs md:text-base text-white">Power By</span>
+        <Image
+          src={dgc}
+          alt="DGC Logo"
+          class=""
+          width={51}
+          height={51}
+        />
+      </div>
     </div>
-
   </div>
-</div>
-  
 </footer>
