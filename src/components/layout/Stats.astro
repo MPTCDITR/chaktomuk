@@ -1,21 +1,24 @@
 ---
 // src/components/Stats.astro
 ---
-<section class="py-12 bg-white font-sans">
-  <div class=" mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-7 text-center font-bold">
+
+<section class="my-16 bg-white font-sans">
+  <div class="container mx-auto">
+    <div
+      class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 text-center font-bold gap-5"
+    >
       <div>
-        <p class="text-5xl text-secondary" >340+</p>
-        <p class="text-primary mt-1 text-2xl">Users</p>
+        <p class="text-5xl text-secondary">340+</p>
+        <p class="text-primary text-2xl">Users</p>
       </div>
       <div>
         <p class="text-5xl text-secondary">3.34k+</p>
-        <p class="text-primary mt-1 text-2xl">Processed Flows</p>
+        <p class="text-primary text-2xl">Processed Flows</p>
       </div>
-      <div>
+      <div class="lg:col-span-1 md:col-span-2">
         <p class="text-5xl text-secondary">502k+</p>
-        <p class="text-primary mt-1 text-2xl">Total Processes</p>
-    </div>
+        <p class="text-primary text-2xl">Total Processes</p>
+      </div>
     </div>
   </div>
 </section>
