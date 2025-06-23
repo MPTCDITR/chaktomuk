@@ -1,26 +1,30 @@
 ---
 // src/components/Header.astro
-import { Image } from 'astro:assets';
-
+import { Image } from "astro:assets";
+import logoctm from "@/assets/logo/logo-ctm.png";
+import khflag from "@/assets/images/cambodia-flag.png"
 ---
-<header class="py-4 bg-white border-b border-slate-200 sticky top-0 z-50">
-  <div class=" mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-    
-    <a href="/" class="flex items-center gap-2">
-      <img src="/logo.png" alt="Chaktomuk Logo" class="h-8 w-30" />
+
+<header class="py-4 bg-white border-b border-muted sticky top-0 z-50">
+  <div class="mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+    <a href="/" class=" gap-2">
+      <Image
+        src={logoctm}
+        alt="logo"
+        class="w-full h-full"
+        width={125}
+        height={30}
+      />
     </a>
 
-    <button class="w-8 h-8">
+    <button class="w-9 h-9">
       <Image
-        src="/cambodia-flag.png" 
+        src={khflag}
         alt="cambodia-flag"
-        class="w-full h-full object-cover  rounded-full"
-        width={32}
-        height={32}
+        class="w-full h-full object-cover rounded-full"
+        width={120}
+        height={76}
       />
     </button>
-    
   </div>
 </header>
-
-
