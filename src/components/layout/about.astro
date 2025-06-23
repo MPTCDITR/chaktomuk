@@ -2,31 +2,37 @@
 // src/components/About.astro
 
 // 1. Corrected the Image import to use the modern 'astro:assets'
-import { Image } from 'astro:assets';
-import mptc from "@/assets/images/mptc.jpg"
+import { Image } from "astro:assets";
+import mptc from "@/assets/images/mptc.jpg";
 ---
 
 <section class="py-16 md:py-24">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
       <div class="lg:order-1">
-        <h2 class="text-primary text-4xl md:text-5xl font-semibold mb-4">About us</h2>
-        <p class="text-base text-slate-600 leading-relaxed">
-          We are committed to advancing Cambodia's Post, Telecommunications, and ICT sectors by promoting reliable connectivity, accessible services, and modern infrastructure. Guided by principles of free market and social equity, we support digital transformation, enhance government services, empower human capital through education and training, and foster innovation through investment and fair competition—contributing to national development and poverty reduction.
+        <h2 class="text-primary text-4xl md:text-5xl font-semibold mb-4">
+          About us
+        </h2>
+        <p class="text-base text-muted-foreground leading-relaxed">
+          We are committed to advancing Cambodia's Post, Telecommunications, and
+          ICT sectors by promoting reliable connectivity, accessible services,
+          and modern infrastructure. Guided by principles of free market and
+          social equity, we support digital transformation, enhance government
+          services, empower human capital through education and training, and
+          foster innovation through investment and fair competition—contributing
+          to national development and poverty reduction.
         </p>
       </div>
-      
+
       <div class="lg:order-2">
         <Image
           src={mptc}
           alt="MPTC building"
           class="w-full h-auto rounded-2xl"
           width={410}
-          height={342} 
+          height={342}
         />
       </div>
-
     </div>
   </div>
 </section>
