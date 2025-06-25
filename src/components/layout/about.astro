@@ -7,10 +7,19 @@ import mptc from "@/assets/images/mptc.jpg";
 ---
 
 <section class="py-16 md:py-24">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="lg:order-2 space-y-5">
+        <Image
+          src={mptc}
+          alt="MPTC building"
+          class="w-full h-auto rounded-2xl"
+          width={410}
+          height={342}
+        />
+      </div>
       <div class="lg:order-1">
-        <h2 class="text-primary text-4xl md:text-5xl font-semibold mb-4">
+        <h2 class="text-primary text-[40px] font-bold mb-3">
           About us
         </h2>
         <p class="text-base text-muted-foreground leading-relaxed">
@@ -22,16 +31,6 @@ import mptc from "@/assets/images/mptc.jpg";
           foster innovation through investment and fair competition—contributing
           to national development and poverty reduction.
         </p>
-      </div>
-
-      <div class="lg:order-2">
-        <Image
-          src={mptc}
-          alt="MPTC building"
-          class="w-full h-auto rounded-2xl"
-          width={410}
-          height={342}
-        />
       </div>
     </div>
   </div>
