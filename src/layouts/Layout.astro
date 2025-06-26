@@ -7,16 +7,48 @@ export interface Props {
 const { title } = Astro.props;
 
 // This is the correct way: import your global stylesheet.
-import '../styles/global.css';
+import "../styles/global.css";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
+    <link
+      rel="icon"
+      sizes="180x180"
+      type="image/svg+xml"
+      href="/src/assets/logo/ctm-icon.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ctc.edu.kh/en/" />
+    <meta
+      property="og:title"
+      content="ទំព័រដើម - Home | Chaktomuk Digital Platform-ថ្នាលចតុមុខ"
+    />
+    <meta
+      property="og:description"
+      content="Welcome to Cambodia Community Tech Center website!"
+    />
+    <meta
+      property="og:image"
+      content="https://ctc.edu.kh/assets/images/home-social-preview.jpg"
+    />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ctc.edu.kh/en/" />
+    <meta
+      property="twitter:title"
+      content="ទំព័រដើម - Home | Chaktomuk Digital Platform-ថ្នាលចតុមុខ"
+    />
+    <meta
+      property="twitter:description"
+      content="Welcome to Cambodia Community Tech Center website!"
+    />
+    <meta
+      property="twitter:image"
+      content="https://ctc.edu.kh/assets/images/home-social-preview.jpg"
+    />
     <title>{title}</title>
   </head>
   <body>
