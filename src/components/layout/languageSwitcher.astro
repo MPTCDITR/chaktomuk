@@ -1,0 +1,38 @@
+---
+// src/components/common/LanguageSwitcher.astro
+import { Image } from "astro:assets";
+import khflag from "@/assets/language/km-square.svg";
+import enflag from "@/assets/language/en-square.svg";
+import { getRouteFromUrl } from "../../i18n/utils"; // Path relative to LanguageSwitcher.astro
+
+// Define props expected by this component
+export interface Props {
+  lang: string;
+}
+
+const { lang } = Astro.props;
+
+// Logic to determine the target language and its display
+const targetLang = lang === "en" ? "km" : "en";
+const targetLangLabel = lang === "en" ? "ភាសាខ្មែរ" : "English";
+const targetFlag = lang === "en" ? khflag : enflag;
+
+// Get the current route to maintain the path when switching languages
+const currentRoute = getRouteFromUrl(Astro.url);
+
+const languageSwitcherHref = `/${targetLang}${currentRoute === "/" ? "" : currentRoute}`;
+---
+
+<a
+  href={languageSwitcherHref}
+  class=" flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-300 hover:bg-gray-100 transition-colors duration-200"
+>
+  <Image
+    src={targetFlag}
+    alt={`${targetLangLabel} flag`}
+    class=" w-6 h-6 object-cover rounded-full"
+    width={24}
+    height={24}
+  />
+  <span class="text-sm font-medium text-secondary">{targetLangLabel}</span>
+</a>
