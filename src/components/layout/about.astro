@@ -1,7 +1,20 @@
 ---
-// src/components/About.astro
+// src/components/layout/About.astro
+// This component is currently located at src/components/layout/About.astro
+
 import { Image } from "astro:assets";
 import mptc from "@/assets/images/mptc.jpg";
+
+// FIX: Import TranslationKey from your i18n/ui.ts file
+import type { TranslationKey } from "@/i18n/ui";
+
+interface Props {
+  lang: string;
+
+  t: (key: TranslationKey) => string;
+}
+
+const { lang, t } = Astro.props as Props;
 ---
 
 <section id="about" aria-labelledby="about-heading" class="py-16 md:py-24">
@@ -11,14 +24,13 @@ import mptc from "@/assets/images/mptc.jpg";
         <figure>
           <Image
             src={mptc}
-            alt="MPTC building, representing the Ministry of Post and Telecommunications of Cambodia"
+            alt={t("about.mptcAltText")}
             class="w-full h-auto rounded-2xl"
             width={410}
             height={342}
           />
           <figcaption class="sr-only">
-            Image of the Ministry of Post and Telecommunications of Cambodia
-            building.
+            {t("about.mptcFigCaption")}
           </figcaption>
         </figure>
       </div>
@@ -28,19 +40,12 @@ import mptc from "@/assets/images/mptc.jpg";
             id="about-heading"
             class="text-primary text-[40px] font-bold mb-3"
           >
-            About Chaktumok Platform
+            {t("about.heading")}
           </h2>
         </header>
         <article>
           <p class="text-base text-muted-foreground leading-relaxed">
-            We are committed to advancing Cambodia’s Post, Telecommunications,
-            and ICT sectors by promoting reliable connectivity, accessible
-            services, and modern infrastructure. Guided by principles of free
-            market and social equity, we support digital transformation, enhance
-            government services, empower human capital through education and
-            training, and foster innovation through investment and fair
-            competition—contributing to national development and poverty
-            reduction.
+            {t("about.description")}
           </p>
         </article>
       </div>
