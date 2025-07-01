@@ -31,12 +31,11 @@ export const ui = {
     "about.mptcFigCaption": "Ministry of Post and Telecommunications",
 
     // --- ADDED SEO/Meta Translations ---
-    "seo.title": "Chaktomuk Digital Platform", 
+    "seo.title": "Chaktomuk Digital Platform",
     "seo.description":
       "Chaktomuk is a robust digital workspace created by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency in Cambodia. It aims to simplify internal workflows and foster collaboration, enabling agencies to operate more effectively and transparently in a digital landscape.",
     "seo.ogUrl": "https://chaktomok.gov.kh/",
-    "seo.ogImage": "/images/logo-ctm.png", 
-  
+    "seo.ogImage": "/images/logo-ctm.png",
   },
   km: {
     "site.title": "ថ្នាលចតុមុខឌីជីថល",
@@ -46,8 +45,8 @@ export const ui = {
     "nav.services": "សេវាកម្ម",
     "nav.contact": "ទំនាក់ទំនង",
     // hero
-    "hero.title.1": "ថ្នាល",
-    "hero.title.2": "ចតុមុខ",
+    "hero.title.1": "ថ្នាលចតុមុខ",
+    "hero.title.2": "ឌីជីថល",
     "hero.description":
       "ថ្នាលចតុមុខគឺជាកន្លែងធ្វើការឌីជីថលដ៏រឹងមាំមួយដែលបង្កើតឡើងដោយក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ (MPTC) ដើម្បីបង្កើនប្រសិទ្ធភាពរបស់រដ្ឋាភិបាលក្នុងប្រទេសកម្ពុជា។ វាមានគោលបំណងធ្វើឱ្យលំហូរការងារផ្ទៃក្នុងមានភាពសាមញ្ញ និងជំរុញកិច្ចសហការ ដែលអនុញ្ញាតឱ្យភ្នាក់ងារធ្វើប្រតិបត្តិការកាន់តែមានប្រសិទ្ធភាព និងតម្លាភាពនៅក្នុងទិដ្ឋភាពឌីជីថល។",
     // about
@@ -58,11 +57,10 @@ export const ui = {
     "about.mptcFigCaption": "ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍",
 
     //  SEO/Meta Translations
-    "seo.title": "ថ្នាលចតុមុខឌីជីថល", 
+    "seo.title": "ថ្នាលចតុមុខឌីជីថល",
     "seo.description":
       "ចតុមុខ គឺជាកន្លែងធ្វើការឌីជីថលដ៏រឹងមាំមួយដែលបង្កើតឡើងដោយក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ (MPTC) ដើម្បីបង្កើនប្រសិទ្ធភាពរបស់រដ្ឋាភិបាលក្នុងប្រទេសកម្ពុជា។ វាមានគោលបំណងធ្វើឱ្យលំហូរការងារផ្ទៃក្នុងមានភាពសាមញ្ញ និងជំរុញកិច្ចសហការ ដែលអនុញ្ញាតឱ្យភ្នាក់ងារធ្វើប្រតិបត្តិការកាន់តែមានប្រសិទ្ធភាព និងតម្លាភាពនៅក្នុងទិដ្ឋភាពឌីជីថល។",
     "seo.ogUrl": "https://chaktomok.gov.kh/",
     "seo.ogImage": "/images/logo-ctm.png",
-
   },
 } as const;
