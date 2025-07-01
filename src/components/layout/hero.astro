@@ -2,7 +2,11 @@
 // src/components/Hero.astro
 import { Image } from "astro:assets";
 import homepage from "@/assets/images/homepage.jpg";
-const { t } = Astro.props;
+import { useTranslations } from "@/i18n/utils";
+import { languages } from "@/i18n/ui";
+
+const lang = Astro.params.lang as keyof typeof languages;
+const t = useTranslations(lang);
 ---
 
 <section class="py-20 md:py-28 bg-white text-center">

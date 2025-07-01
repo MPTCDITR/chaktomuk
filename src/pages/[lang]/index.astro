@@ -9,7 +9,7 @@ import Feature from "@/components/layout/Feature.astro";
 import About from "@/components/layout/About.astro";
 import { useTranslations } from "@/i18n/utils";
 import WhyUs from "@/components/layout/WhyUs.astro";
-import { languages } from "@/i18n/ui"; 
+import { languages } from "@/i18n/ui";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((langKey) => {
@@ -25,11 +25,11 @@ const t = useTranslations(lang);
 
 <Layout title={t("site.title")}>
   <main>
-    <Hero lang={lang} t={t} />
-    <Stats lang={lang} t={t} />
-    <TrustedBy lang={lang} t={t} />
-    <Feature lang={lang} t={t} />
-    <WhyUs lang={lang} t={t} />
-    <About lang={lang} t={t} />
+    <Hero lang={lang} />
+    <Stats lang={lang} />
+    <TrustedBy lang={lang} />
+    <Feature lang={lang} />
+    <WhyUs lang={lang} />
+    <About lang={lang} />
   </main>
 </Layout>

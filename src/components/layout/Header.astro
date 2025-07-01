@@ -6,9 +6,6 @@ import logoctm from "@/assets/logo/logo-ctm.png";
 // Import the LanguageSwitcher component
 import LanguageSwitcher from "@/components/layout/languageSwitcher.astro";
 
-
-
-
 const { lang } = Astro.props;
 ---
 
@@ -17,7 +14,7 @@ const { lang } = Astro.props;
     <a href={`/${lang}/`} class="flex items-center gap-2">
       <Image
         src={logoctm}
-        alt={("header.logoAlt")}
+        alt={"header.logoAlt"}
         class="w-full h-full"
         width={125}
         height={30}
