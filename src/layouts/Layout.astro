@@ -29,7 +29,6 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    {/* Favicons */}
     <link
       rel="icon"
       sizes="180x180"
@@ -41,26 +40,23 @@ import "../styles/global.css";
     <link rel="icon" type="image/png" sizes="16x16" href="/logo/ctm-icon.png" />
 
     <title>{seoTitle}</title>
-    {/* Uses translated SEO title */}
+
     <meta name="title" content={seoTitle} />
     <meta name="description" content={seoDescription} />
-    {/* Uses translated SEO description */}
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={fullOgUrl} />
-    {/* Dynamic URL with language */}
+
     <meta property="og:title" content={seoTitle} />
     <meta property="og:description" content={seoDescription} />
     <meta property="og:image" content={fullOgImage} />
-    {/* Absolute image URL */}
 
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={fullOgUrl} />
-    {/* Dynamic URL with language */}
+
     <meta property="twitter:title" content={seoTitle} />
     <meta property="twitter:description" content={seoDescription} />
     <meta property="twitter:image" content={fullOgImage} />
-    {/* Absolute image URL */}
   </head>
   <body>
     <Header lang={lang} t={t} />

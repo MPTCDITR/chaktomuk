@@ -1,11 +1,9 @@
 ---
 // src/components/layout/About.astro
-// This component is currently located at src/components/layout/About.astro
 
 import { Image } from "astro:assets";
 import mptc from "@/assets/images/mptc.jpg";
 
-// FIX: Import TranslationKey from your i18n/ui.ts file
 import type { TranslationKey } from "@/i18n/ui";
 
 interface Props {
@@ -21,18 +19,16 @@ const { lang, t } = Astro.props as Props;
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       <div class="lg:order-2 space-y-5">
-        <figure>
-          <Image
-            src={mptc}
-            alt={t("about.mptcAltText")}
-            class="w-full h-auto rounded-2xl"
-            width={410}
-            height={342}
-          />
-          <figcaption class="sr-only">
-            {t("about.mptcFigCaption")}
-          </figcaption>
-        </figure>
+        <Image
+          src={mptc}
+          alt={t("about.mptcAltText")}
+          class="w-full h-full rounded-2xl"
+          width={1280}
+          height={853}
+        />
+        <figcaption class="sr-only">
+          {t("about.mptcFigCaption")}
+        </figcaption>
       </div>
       <div class="lg:order-1">
         <header>
