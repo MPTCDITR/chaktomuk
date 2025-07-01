@@ -4,6 +4,10 @@ import Image from "astro/components/Image.astro";
 import design from "@/assets/images/design.png";
 import automate from "@/assets/images/automate.png";
 import analytic from "@/assets/images/analytic.png";
+import { useTranslations } from "@/i18n/utils";
+import { languages } from "@/i18n/ui";
+const lang = Astro.params.lang as keyof typeof languages;
+const t = useTranslations(lang);
 ---
 
 <section id="features" class="py-1 bg-white">

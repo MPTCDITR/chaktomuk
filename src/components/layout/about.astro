@@ -4,15 +4,10 @@
 import { Image } from "astro:assets";
 import mptc from "@/assets/images/mptc.jpg";
 
-import type { TranslationKey } from "@/i18n/ui";
-
-interface Props {
-  lang: string;
-
-  t: (key: TranslationKey) => string;
-}
-
-const { lang, t } = Astro.props as Props;
+import { useTranslations } from "@/i18n/utils";
+import { languages } from "@/i18n/ui";
+const lang = Astro.params.lang as keyof typeof languages;
+const t = useTranslations(lang);
 ---
 
 <section id="about" aria-labelledby="about-heading" class="py-16 md:py-24">
