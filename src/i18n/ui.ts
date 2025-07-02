@@ -33,7 +33,6 @@ export const ui = {
       "We are committed to advancing Cambodia's Post, Telecommunications, and ICT sectors by promoting reliable connectivity, accessible services, and modern infrastructure. Guided by principles of free market and social equity, we support digital transformation, enhance government services, empower human capital through education and training, and foster innovation through investment and fair competition—contributing to national development and poverty reduction.",
     "about.mptcAltText":
       "Ministry of Post and Telecommunications of Cambodia building",
-    "about.mptcFigCaption": "Ministry of Post and Telecommunications",
   },
   km: {
     "site.title": "ថ្នាលចតុមុខឌីជីថល",
@@ -57,6 +56,5 @@ export const ui = {
     "about.description":
       "យើងប្តេជ្ញាជំរុញវិស័យប្រៃសណីយ៍ ទូរគមនាគមន៍ និង ICT របស់កម្ពុជា តាមរយៈការលើកកម្ពស់ការតភ្ជាប់ដែលអាចទុកចិត្តបាន សេវាដែលអាចចូលដំណើរការបាន និងហេដ្ឋារចនាសម្ព័ន្ធទំនើប។ ដឹកនាំដោយគោលការណ៍នៃទីផ្សារសេរី និងសមធម៌សង្គម យើងគាំទ្រដល់ការផ្លាស់ប្តូរឌីជីថល លើកកំពស់សេវាកម្មរដ្ឋាភិបាល ផ្តល់អំណាចដល់ធនធានមនុស្សតាមរយៈការអប់រំ និងការបណ្តុះបណ្តាល និងជំរុញការបង្កើតថ្មីតាមរយៈការវិនិយោគ និងការប្រកួតប្រជែងដោយយុត្តិធម៌ ដែលរួមចំណែកដល់ការអភិវឌ្ឍន៍ជាតិ និងការកាត់បន្ថយភាពក្រីក្រ។",
     "about.mptcAltText": "អគារក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍",
-    "about.mptcFigCaption": "ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍",
   },
 } as const;

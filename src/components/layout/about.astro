@@ -21,24 +21,19 @@ const t = useTranslations(lang);
           width={1280}
           height={853}
         />
-        <figcaption class="sr-only">
-          {t("about.mptcFigCaption")}
-        </figcaption>
       </div>
       <div class="lg:order-1">
-        <header>
+        <div>
           <h2
             id="about-heading"
             class="text-primary text-[40px] font-bold mb-3"
           >
             {t("about.heading")}
           </h2>
-        </header>
-        <article>
-          <p class="text-base text-muted-foreground leading-relaxed">
-            {t("about.description")}
-          </p>
-        </article>
+        </div>
+        <p class="text-base text-muted-foreground leading-relaxed">
+          {t("about.description")}
+        </p>
       </div>
     </div>
   </div>
