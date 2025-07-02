@@ -1,13 +1,16 @@
 ---
-// src/pages/WhyUs.astro
+// src/pages/TrustedBy.astro
 import { Image } from "astro:assets";
-
 import dgc from "@/assets/logo/dgc.svg";
 import mptc from "@/assets/logo/logo-mptc.png";
 import trc from "@/assets/logo/logo-trc.png";
 import cadt from "@/assets/logo/logo-cadt.png";
 import cp from "@/assets/logo/logo-cp.png";
 import tc from "@/assets/logo/logo-tc.png";
+import { useTranslations } from "@/i18n/utils";
+import { languages } from "@/i18n/ui";
+const lang = Astro.params.lang as keyof typeof languages;
+const t = useTranslations(lang);
 ---
 
 <section class="py-16 bg-box">

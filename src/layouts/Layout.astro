@@ -1,26 +1,68 @@
 ---
 // src/layouts/Layout.astro
+import Header from "@/components/layout/Header.astro";
+import Footer from "@/components/layout/Footer.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { languages } from "@/i18n/ui";
+
 export interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
+const lang = getLangFromUrl(Astro.url) as keyof typeof languages;
+const t = useTranslations(lang);
 
-// This is the correct way: import your global stylesheet.
-import '../styles/global.css';
+// --- Get translated SEO/Meta tag content from ui.ts ---
+const seoTitle = t("seo.title");
+const seoDescription = t("seo.description");
+const baseUrl = t("seo.ogUrl");
+const fullOgUrl = new URL(`/${lang}/`, baseUrl).href;
+const ogImage = t("seo.ogImage");
+const fullOgImage = new URL(ogImage, Astro.url.origin).href;
+
+import "../styles/global.css";
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <link
+      rel="icon"
+      sizes="180x180"
+      type="image/png"
+      href="/logo/ctm-icon.png"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/logo/ctm-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/logo/ctm-icon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/logo/ctm-icon.png" />
+
+    <title>{seoTitle}</title>
+
+    <meta name="title" content={seoTitle} />
+    <meta name="description" content={seoDescription} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={fullOgUrl} />
+
+    <meta property="og:title" content={seoTitle} />
+    <meta property="og:description" content={seoDescription} />
+    <meta property="og:image" content={fullOgImage} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={fullOgUrl} />
+
+    <meta property="twitter:title" content={seoTitle} />
+    <meta property="twitter:description" content={seoDescription} />
+    <meta property="twitter:image" content={fullOgImage} />
   </head>
   <body>
-    <!-- The <slot /> is where your page content (from index.astro) will be injected -->
-    <slot />
+    <Header lang={lang} t={t} />
+    <main>
+      <slot />
+    </main>
+    <Footer lang={lang} t={t} />
   </body>
 </html>

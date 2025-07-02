@@ -1,5 +1,10 @@
 ---
 // src/components/Stats.astro
+
+import { useTranslations } from "@/i18n/utils";
+import { languages } from "@/i18n/ui";
+const lang = Astro.params.lang as keyof typeof languages;
+const t = useTranslations(lang);
 ---
 
 <section class="my-16 bg-white">
@@ -9,7 +14,7 @@
     >
       <div>
         <p class="text-5xl text-secondary">340+</p>
-        <p class="text-primary text-2xl">Users</p>
+        <p class="text-primary text-2xl">{t("static.title.1")}</p>
       </div>
       <div>
         <p class="text-5xl text-secondary">3.34k+</p>

@@ -1,16 +1,18 @@
 ---
-// Import necessary components at the top.
+// src/components/WhyUs.astro
 import { Image } from "astro:assets";
 import whyus from "@/assets/images/why_us.png";
 import { ChartNoAxesCombined, ListTodo, ScrollText } from "lucide-react";
+import { useTranslations } from "@/i18n/utils";
+import { languages } from "@/i18n/ui";
+const lang = Astro.params.lang as keyof typeof languages;
+const t = useTranslations(lang);
 ---
 
 <section class="py-16 md:py-24">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center max-w-3xl mx-auto">
-      <h2 class="text-primary text-[40px]  font-bold mb-4">
-        Why should be us?
-      </h2>
+      <h2 class="text-primary text-[40px] font-bold mb-4">Why should be us?</h2>
       <p class="text-base text-muted-foreground">
         simplifies government work by bringing everything into one secure
         digital platform. It helps users design custom workflows, automate
@@ -44,7 +46,8 @@ import { ChartNoAxesCombined, ListTodo, ScrollText } from "lucide-react";
               </h2>
               <p class="text-muted-foreground">
                 Chaktomuk streamlines everyday tasks and approvals through
-                automation...
+                automation, helping users reduce manual work, avoid delays, and
+                focus on what matters most.
               </p>
             </div>
           </div>
@@ -59,7 +62,8 @@ import { ChartNoAxesCombined, ListTodo, ScrollText } from "lucide-react";
               </h2>
               <p class="text-muted-foreground">
                 With integrated tools for workflow, forms, documents, and
-                analytics...
+                analytics, Chaktomuk provides a single, centralized platform to
+                manage all your work efficiently and securely.
               </p>
             </div>
           </div>
@@ -73,8 +77,9 @@ import { ChartNoAxesCombined, ListTodo, ScrollText } from "lucide-react";
                 Make Informed Decisions
               </h2>
               <p class="text-muted-foreground">
-                Real-time dashboards and reports give users — especially
-                leaders...
+                Real-time dashboards and reports give users — especially leaders
+                — clear visibility into operations, performance, and team
+                activity, supporting smarter, data-driven decisions.
               </p>
             </div>
           </div>
