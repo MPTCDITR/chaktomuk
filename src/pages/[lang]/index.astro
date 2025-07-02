@@ -7,7 +7,6 @@ import Stats from "@/components/layout/Stats.astro";
 import TrustedBy from "@/components/layout/TrustedBy.astro";
 import Feature from "@/components/layout/Feature.astro";
 import About from "@/components/layout/About.astro";
-import { useTranslations } from "@/i18n/utils";
 import WhyUs from "@/components/layout/WhyUs.astro";
 import { languages } from "@/i18n/ui";
 
@@ -20,10 +19,9 @@ export async function getStaticPaths() {
 }
 
 const lang = Astro.params.lang as keyof typeof languages;
-const t = useTranslations(lang);
 ---
 
-<Layout title={t("site.title")}>
+<Layout title="ទំព័រដើម - Home">
   <main>
     <Hero lang={lang} />
     <Stats lang={lang} />

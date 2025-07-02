@@ -4,59 +4,30 @@ import Header from "@/components/layout/Header.astro";
 import Footer from "@/components/layout/Footer.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { languages } from "@/i18n/ui";
-
-export interface Props {
+import CTMLogo from "@/assets/logo/ctm-icon.png";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
+import BaseHead from "@/components/BaseHead.astro";
+interface Props {
   title: string;
+  description?: string;
+  img?: string;
 }
 
-const { title } = Astro.props;
+const { title, description, img } = Astro.props;
+const ImageURL = new URL(img ? img : CTMLogo.src, Astro.url).href;
 const lang = getLangFromUrl(Astro.url) as keyof typeof languages;
 const t = useTranslations(lang);
-
-// --- Get translated SEO/Meta tag content from ui.ts ---
-const seoTitle = t("seo.title");
-const seoDescription = t("seo.description");
-const baseUrl = t("seo.ogUrl");
-const fullOgUrl = new URL(`/${lang}/`, baseUrl).href;
-const ogImage = t("seo.ogImage");
-const fullOgImage = new URL(ogImage, Astro.url.origin).href;
 
 import "../styles/global.css";
 ---
 
-<!doctype html>
 <html lang={lang}>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link
-      rel="icon"
-      sizes="180x180"
-      type="image/png"
-      href="/logo/ctm-icon.png"
+    <BaseHead
+      title={title || SITE_TITLE}
+      description={description || SITE_DESCRIPTION}
+      ogImage={ImageURL}
     />
-    <link rel="apple-touch-icon" sizes="180x180" href="/logo/ctm-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/logo/ctm-icon.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/logo/ctm-icon.png" />
-
-    <title>{seoTitle}</title>
-
-    <meta name="title" content={seoTitle} />
-    <meta name="description" content={seoDescription} />
-
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={fullOgUrl} />
-
-    <meta property="og:title" content={seoTitle} />
-    <meta property="og:description" content={seoDescription} />
-    <meta property="og:image" content={fullOgImage} />
-
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={fullOgUrl} />
-
-    <meta property="twitter:title" content={seoTitle} />
-    <meta property="twitter:description" content={seoDescription} />
-    <meta property="twitter:image" content={fullOgImage} />
   </head>
   <body>
     <Header lang={lang} t={t} />

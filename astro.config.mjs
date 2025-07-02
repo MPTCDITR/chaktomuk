@@ -6,6 +6,11 @@ import react from "@astrojs/react";
 
 
 export default defineConfig({
+  site: process.env.PUBLIC_SITE_URL || "http://localhost:4321",
+
+  server: {
+    host: "::",
+  },
   i18n: {
     defaultLocale: "km",
     locales: ["en", "km"], // English and Khmer

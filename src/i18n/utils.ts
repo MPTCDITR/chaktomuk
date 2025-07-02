@@ -1,5 +1,5 @@
 // src/i18n/utils.ts
-import { ui, defaultLang } from "./ui";
+import { ui, defaultLang, type SupportedLanguage } from "./ui";
 
 export function getLangFromUrl(url: URL) {
   const parts = url.pathname.split("/");
@@ -44,4 +44,11 @@ export function getLocalizedPath(path: string, lang: keyof typeof ui) {
     return path;
   }
   return `/${lang}${path}`;
+}
+
+export function removeLanguagePrefix(
+  slug: string,
+  lang: SupportedLanguage
+): string {
+  return slug.replace(`${lang}/`, "");
 }
