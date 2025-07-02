@@ -6,12 +6,15 @@ export const languages = {
 
 export const defaultLang = "km";
 
+export type SupportedLanguage = keyof typeof languages;
+
 // Define the type for all possible translation keys
 export type TranslationKey = keyof (typeof ui)[typeof defaultLang];
 
 export const ui = {
   en: {
     "site.title": "Chaktomuk Digital Platform",
+    "site.description": "",
     // nav
     "nav.home": "Home",
     "nav.about": "About Us",
@@ -31,16 +34,10 @@ export const ui = {
     "about.mptcAltText":
       "Ministry of Post and Telecommunications of Cambodia building",
     "about.mptcFigCaption": "Ministry of Post and Telecommunications",
-
-    // --- ADDED SEO/Meta Translations ---
-    "seo.title": "Chaktomuk Digital Platform",
-    "seo.description":
-      "Chaktomuk is a robust digital workspace created by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency in Cambodia. It aims to simplify internal workflows and foster collaboration, enabling agencies to operate more effectively and transparently in a digital landscape.",
-    "seo.ogUrl": "https://chaktomok.gov.kh/",
-    "seo.ogImage": "/images/logo-ctm.png",
   },
   km: {
     "site.title": "ថ្នាលចតុមុខឌីជីថល",
+    "site.description": "",
     // nav
     "nav.home": "ទំព័រដើម",
     "nav.about": "អំពី​ពួកយើង",
@@ -61,12 +58,5 @@ export const ui = {
       "យើងប្តេជ្ញាជំរុញវិស័យប្រៃសណីយ៍ ទូរគមនាគមន៍ និង ICT របស់កម្ពុជា តាមរយៈការលើកកម្ពស់ការតភ្ជាប់ដែលអាចទុកចិត្តបាន សេវាដែលអាចចូលដំណើរការបាន និងហេដ្ឋារចនាសម្ព័ន្ធទំនើប។ ដឹកនាំដោយគោលការណ៍នៃទីផ្សារសេរី និងសមធម៌សង្គម យើងគាំទ្រដល់ការផ្លាស់ប្តូរឌីជីថល លើកកំពស់សេវាកម្មរដ្ឋាភិបាល ផ្តល់អំណាចដល់ធនធានមនុស្សតាមរយៈការអប់រំ និងការបណ្តុះបណ្តាល និងជំរុញការបង្កើតថ្មីតាមរយៈការវិនិយោគ និងការប្រកួតប្រជែងដោយយុត្តិធម៌ ដែលរួមចំណែកដល់ការអភិវឌ្ឍន៍ជាតិ និងការកាត់បន្ថយភាពក្រីក្រ។",
     "about.mptcAltText": "អគារក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍",
     "about.mptcFigCaption": "ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍",
-
-    //  SEO/Meta Translations
-    "seo.title": "ថ្នាលចតុមុខឌីជីថល",
-    "seo.description":
-      "ចតុមុខ គឺជាកន្លែងធ្វើការឌីជីថលដ៏រឹងមាំមួយដែលបង្កើតឡើងដោយក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ (MPTC) ដើម្បីបង្កើនប្រសិទ្ធភាពរបស់រដ្ឋាភិបាលក្នុងប្រទេសកម្ពុជា។ វាមានគោលបំណងធ្វើឱ្យលំហូរការងារផ្ទៃក្នុងមានភាពសាមញ្ញ និងជំរុញកិច្ចសហការ ដែលអនុញ្ញាតឱ្យភ្នាក់ងារធ្វើប្រតិបត្តិការកាន់តែមានប្រសិទ្ធភាព និងតម្លាភាពនៅក្នុងទិដ្ឋភាពឌីជីថល។",
-    "seo.ogUrl": "https://chaktomok.gov.kh/",
-    "seo.ogImage": "/images/logo-ctm.png",
   },
 } as const;
