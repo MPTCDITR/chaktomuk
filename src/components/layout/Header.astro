@@ -1,30 +1,25 @@
 ---
-// src/components/Header.astro
+// src/components/layout/Header.astro
 import { Image } from "astro:assets";
 import logoctm from "@/assets/logo/logo-ctm.png";
-import khflag from "@/assets/images/cambodia-flag.png";
+
+// Import the LanguageSwitcher component
+import LanguageSwitcher from "@/components/layout/languageSwitcher.astro";
+
+const { lang } = Astro.props;
 ---
 
 <header class="py-4 bg-white border-b border-muted sticky top-0 z-50">
   <div class="mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-    <a href="/" class="gap-2">
+    <a href={`/${lang}/`} class="flex items-center gap-2">
       <Image
         src={logoctm}
-        alt="logo"
+        alt={"header.logoAlt"}
         class="w-full h-full"
         width={125}
         height={30}
       />
     </a>
-
-    <button class="w-9 h-9">
-      <Image
-        src={khflag}
-        alt="cambodia-flag"
-        class="w-full h-full object-cover rounded-full"
-        width={120}
-        height={76}
-      />
-    </button>
+    <LanguageSwitcher lang={lang} />
   </div>
 </header>

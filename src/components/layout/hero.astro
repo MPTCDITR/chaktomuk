@@ -2,27 +2,25 @@
 // src/components/Hero.astro
 import { Image } from "astro:assets";
 import homepage from "@/assets/images/homepage.jpg";
+import { useTranslations } from "@/i18n/utils";
+import { languages } from "@/i18n/ui";
+
+const lang = Astro.params.lang as keyof typeof languages;
+const t = useTranslations(lang);
 ---
 
-<section class="py-20 md:py-28 bg-white text-center ">
+<section class="py-20 md:py-28 bg-white text-center">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 lg:w-1/2 md:w-2/3 w-full">
     <h1 class="text-5xl text-black font-semibold gap-y-10 mb-6">
-      Chaktomuk Digital <span class="bg-primary text-white px-3 rounded-xl"
-        >Platform</span
-      >
+      {t("hero.title.1")}
+      <span class="bg-primary text-white px-3 rounded-xl">
+        {t("hero.title.2")}
+      </span>
     </h1>
     <p class="text-lg sm:text-base text-muted-foreground font-normal mx-auto">
-      Chaktomuk is a robust digital workspace created by the Ministry of Post
-      and Telecommunications (MPTC) to enhance government efficiency in
-      Cambodia. It aims to simplify internal workflows and foster collaboration,
-      enabling agencies to operate more effectively and transparently in a
-      digital landscape.
+      {t("hero.description")}
     </p>
   </div>
 </section>
 
-<Image
-  src={homepage}
-  alt="Chaktomuk Digital homepage"
-  class="mt-15 mx-auto w-full max-w-full"
-/>
+<Image src={homepage} alt="" class="mt-15 mx-auto w-full max-w-full" />

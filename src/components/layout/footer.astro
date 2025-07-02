@@ -2,7 +2,7 @@
 // src/components/Footer.astro
 import { Image } from "astro:assets";
 import ctm from "@/assets/logo/logo-ctm_white.png";
-import dgc from "@/assets/logo/logo-mptc.png";
+import mptc from "@/assets/logo/mptc.svg";
 import {
   Facebook,
   Linkedin,
@@ -12,6 +12,10 @@ import {
   Twitter,
   Youtube,
 } from "lucide-react";
+import { useTranslations } from "@/i18n/utils";
+import { languages } from "@/i18n/ui";
+const lang = Astro.params.lang as keyof typeof languages;
+const t = useTranslations(lang);
 ---
 
 <footer id="contact" class="bg-primary text-white">
@@ -106,7 +110,7 @@ import {
 
         <div class="flex items-center gap-2 place-self-end">
           <span class="text-xs md:text-base text-white">Powered By</span>
-          <Image src={dgc} alt="DGC Logo" class="" width={51} height={51} />
+          <Image src={mptc} alt="MPTC Logo" />
         </div>
       </div>
     </div>
