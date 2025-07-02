@@ -1,0 +1,50 @@
+---
+import CTMLogo from "@/assets/logo/ctm-icon.png";
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+}
+
+const { title, description, ogImage = CTMLogo.src } = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+const socialImageURL = new URL(ogImage ? ogImage : CTMLogo.src, Astro.url).href;
+---
+
+<!-- Primary Meta Tags -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href={ogImage} />
+<meta name="generator" content={Astro.generator} />
+<link rel="sitemap" href="/sitemap-index.xml" />
+<link rel="canonical" href={canonicalURL} />
+
+<title>
+  {title} | Chaktokmuk Digital Platform
+</title>
+<meta name="title" content={`${title} | Chaktokmuk Digital Platform`} />
+<meta name="description" content={description} />
+<meta name="author" content="Chaktokmuk Digital Platform" />
+<meta name="keywords" content="Chaktomuk, CTM ,​​ ចតុមុខ" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content="Chaktokmuk Digital Platform" />
+<meta
+  property="og:description"
+  content="Chaktomuk is a robust digital workspace created by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency in Cambodia. It aims to simplify internal workflows and foster collaboration, enabling agencies to operate more effectively and transparently in a digital landscape."
+/>
+<meta property="og:image" content={socialImageURL} />
+
+<!-- X (Twitter) -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content="Chaktokmuk Digital Platform" />
+<meta
+  property="twitter:description"
+  content="Chaktomuk is a robust digital workspace created by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency in Cambodia. It aims to simplify internal workflows and foster collaboration, enabling agencies to operate more effectively and transparently in a digital landscape."
+/>
+<meta property="twitter:image" content={socialImageURL} />
