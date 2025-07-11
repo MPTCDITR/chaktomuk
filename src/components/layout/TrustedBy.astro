@@ -3,9 +3,9 @@
 import { Image } from "astro:assets";
 import dgc from "@/assets/logo/dgc.svg";
 import mptc from "@/assets/logo/logo-mptc.png";
-import trc from "@/assets/logo/logo-trc.png";
+import trc from "@/assets/logo/TRC-Logo.jpg";
 import cadt from "@/assets/logo/logo-cadt.png";
-import cp from "@/assets/logo/logo-cp.png";
+import cp from "@/assets/logo/Cambodia-Post-Logo.png";
 import tc from "@/assets/logo/logo-tc.png";
 import { useTranslations } from "@/i18n/utils";
 import { languages } from "@/i18n/ui";
@@ -18,13 +18,51 @@ const t = useTranslations(lang);
     <h3 class="text-[32px] font-bold uppercase text-primary mb-8">
       Trusted By
     </h3>
-    <div class="flex flex-wrap justify-center items-center gap-x-9 gap-y-8">
-      <Image src={mptc} alt="MPTC Logo" width={158} height={151} />
-      <Image src={dgc} alt="DGC Logo" width={158} height={151} />
-      <Image src={trc} alt="trc Logo" width={113} height={105} />
-      <Image src={cadt} alt="MPTC Logo" width={224.25} height={133} />
-      <Image src={cp} alt="CP Logo" width={110} height={106} />
-      <Image src={tc} alt="TC Logo" width={124} height={119} />
+    <div
+      class="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 justify-center items-center gap-6"
+    >
+      <Image
+        src={mptc}
+        alt="MPTC Logo"
+        width={558}
+        height={551}
+        class="xl:w-[200px] xl:h-[200px] w-[168px] h-[168px] lg:object-cover md:object-contain object-cover mx-auto"
+      />
+      <Image
+        src={dgc}
+        alt="MPTC Logo"
+        width={558}
+        height={551}
+        class="w-[258px] h-[251px] xl:object-cover object-contain mx-auto"
+      />
+      <Image
+        src={trc}
+        alt="MPTC Logo"
+        width={558}
+        height={551}
+        class="w-[165px] h-[165px] object-contain mx-auto"
+      />
+      <Image
+        src={cadt}
+        alt="MPTC Logo"
+        width={558}
+        height={551}
+        class="w-[158px] h-[151px] object-contain mx-auto"
+      />
+      <Image
+        src={cp}
+        alt="MPTC Logo"
+        width={558}
+        height={551}
+        class="w-[160px] h-[160px] object-contain mx-auto lg:col-span-1 md:col-span-2"
+      />
+      <Image
+        src={tc}
+        alt="MPTC Logo"
+        width={558}
+        height={551}
+        class="w-[170px] h-[170px] xl:object-cover object-contain mx-auto lg:col-span-1 md:col-span-2"
+      />
     </div>
   </div>
 </section>
