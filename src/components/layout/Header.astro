@@ -9,17 +9,22 @@ import LanguageSwitcher from "@/components/layout/languageSwitcher.astro";
 const { lang } = Astro.props;
 ---
 
-<header class="py-4 bg-white border-b border-muted sticky top-0 z-50">
+<nav class="py-4 bg-white border-b border-muted sticky top-0 z-50">
   <div class="mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-    <a href={`/${lang}/`} class="flex items-center gap-2">
+    <a
+      title="Chaktokmuk Digital Platform"
+      href={`/${lang}/`}
+      class="flex items-center gap-2"
+    >
       <Image
         src={logoctm}
         alt={"header.logoAlt"}
         class="w-full h-full"
         width={125}
         height={30}
+        loading="lazy"
       />
     </a>
     <LanguageSwitcher lang={lang} />
   </div>
-</header>
+</nav>
