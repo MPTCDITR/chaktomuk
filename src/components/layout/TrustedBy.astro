@@ -7,62 +7,77 @@ import trc from "@/assets/logo/TRC-Logo.jpg";
 import cadt from "@/assets/logo/logo-cadt.png";
 import cp from "@/assets/logo/Cambodia-Post-Logo.png";
 import tc from "@/assets/logo/logo-tc.png";
-import { useTranslations } from "@/i18n/utils";
-import { languages } from "@/i18n/ui";
-const lang = Astro.params.lang as keyof typeof languages;
-const t = useTranslations(lang);
 ---
 
-<section class="py-16 bg-box">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h3 class="text-[32px] font-bold uppercase text-primary mb-8">
-      Trusted By
-    </h3>
-    <div
-      class="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 justify-center items-center gap-6"
+<section id="trusted-by" aria-label="trusted-by" class="bg-accent/30">
+  <div
+    class="container mx-auto px-4 sm:px-6 lg:px-8 text-center py-16"
+    aria-labelledby="trusted-by"
+  >
+    <h2
+      class="text-4xl font-bold uppercase text-primary mb-8"
+      aria-labelledby="trusted-by"
     >
-      <Image
-        src={mptc}
-        alt="MPTC Logo"
-        width={558}
-        height={551}
-        class="xl:w-[200px] xl:h-[200px] w-[168px] h-[168px] lg:object-cover md:object-contain object-cover mx-auto"
-      />
-      <Image
-        src={dgc}
-        alt="MPTC Logo"
-        width={558}
-        height={551}
-        class="w-[258px] h-[251px] xl:object-cover object-contain mx-auto"
-      />
-      <Image
-        src={trc}
-        alt="MPTC Logo"
-        width={558}
-        height={551}
-        class="w-[165px] h-[165px] object-contain mx-auto"
-      />
-      <Image
-        src={cadt}
-        alt="MPTC Logo"
-        width={558}
-        height={551}
-        class="w-[158px] h-[151px] object-contain mx-auto"
-      />
-      <Image
-        src={cp}
-        alt="MPTC Logo"
-        width={558}
-        height={551}
-        class="w-[160px] h-[160px] object-contain mx-auto lg:col-span-1 md:col-span-2"
-      />
-      <Image
-        src={tc}
-        alt="MPTC Logo"
-        width={558}
-        height={551}
-        class="w-[170px] h-[170px] xl:object-cover object-contain mx-auto lg:col-span-1 md:col-span-2"
-      />
-    </div>
+      Trusted By
+    </h2>
+    <ul
+      class="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 justify-center items-center gap-6"
+      aria-labelledby="trusted-by"
+    >
+      <li aria-label="MPTC Logo">
+        <Image
+          src={mptc}
+          alt="MPTC Logo"
+          width={558}
+          height={551}
+          class="xl:w-[200px] xl:h-[200px] w-[168px] h-[168px] lg:object-cover md:object-contain object-cover mx-auto"
+        />
+      </li>
+      <li aria-label="DGC Logo">
+        <Image
+          src={dgc}
+          alt="DGC Logo"
+          width={558}
+          height={551}
+          class="w-[258px] h-[251px] xl:object-cover object-contain mx-auto"
+        />
+      </li>
+      <li aria-label="TRC Logo">
+        <Image
+          src={trc}
+          alt="TRC Logo"
+          width={558}
+          height={551}
+          class="w-[165px] h-[165px] object-contain mx-auto"
+        />
+      </li>
+      <li aria-label="CADT Logo">
+        <Image
+          src={cadt}
+          alt="CADT Logo"
+          width={558}
+          height={551}
+          class="w-[158px] h-[151px] object-contain mx-auto"
+        />
+      </li>
+      <li aria-label="CP Logo" class="lg:col-span-1 md:col-span-2">
+        <Image
+          src={cp}
+          alt="CP Logo"
+          width={558}
+          height={551}
+          class="w-[160px] h-[160px] object-contain mx-auto"
+        />
+      </li>
+      <li aria-label="TC Logo" class="lg:col-span-1 md:col-span-2">
+        <Image
+          src={tc}
+          alt="TC Logo"
+          width={558}
+          height={551}
+          class="w-[170px] h-[170px] xl:object-cover object-contain mx-auto"
+        />
+      </li>
+    </ul>
   </div>
 </section>

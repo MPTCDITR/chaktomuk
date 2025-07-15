@@ -10,7 +10,7 @@ const lang = Astro.params.lang as keyof typeof languages;
 const t = useTranslations(lang);
 ---
 
-<section id="about" aria-labelledby="about-heading" class="py-16 md:py-24">
+<section id="about" aria-label="about-heading" class="py-16 md:py-24">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
       <div class="lg:order-2 space-y-5">

@@ -122,3 +122,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+h1 {
+  margin-block: 0.67em;
+  @apply text-5xl font-bold gap-y-10 mb-6 leading-[1.3];
+}

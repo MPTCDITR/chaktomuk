@@ -12,10 +12,8 @@ import {
   Twitter,
   Youtube,
 } from "lucide-react";
-import { useTranslations } from "@/i18n/utils";
-import { languages } from "@/i18n/ui";
-const lang = Astro.params.lang as keyof typeof languages;
-const t = useTranslations(lang);
+
+const currentYear = new Date().getFullYear();
 ---
 
 <footer id="contact" class="bg-primary text-white">
@@ -23,8 +21,9 @@ const t = useTranslations(lang);
     <div class="md:grid md:grid-cols-3 gap-8 md:gap-12 space-y-8 md:space-y-0">
       <div
         class="md:col-span-1 col-span-2 flex justify-center md:justify-start"
+        aria-label="logo"
       >
-        <a href="/" class="mb-4">
+        <a href="/" class="mb-4" aria-label="Chaktomuk Logo">
           <Image
             src={ctm}
             alt="Chaktomuk Logo"
@@ -35,8 +34,8 @@ const t = useTranslations(lang);
         </a>
       </div>
       <div>
-        <h3 class="text-2xl font-bold mb-4">Other Links</h3>
-        <ul class="space-y-3">
+        <h3 class="text-2xl font-bold mb-4" id="other-links">Other Links</h3>
+        <ul class="space-y-3" aria-labelledby="other-links">
           <li>
             <a
               href="https://mptc.gov.kh/en/"
@@ -58,13 +57,13 @@ const t = useTranslations(lang);
         </ul>
       </div>
       <div>
-        <h3 class="text-2xl font-bold mb-4">Contact us</h3>
-        <ul class="space-y-3">
+        <h3 class="text-2xl font-bold mb-4" id="contact-us">Contact us</h3>
+        <ul class="space-y-3" aria-labelledby="contact-us">
           <li class="flex items-center gap-2">
             <Mail className="text-white" size={20} strokeWidth={2} />
             <a
-              href="mailto:support@dgc.gov.kh"
-              class="hover:text-white transition-colors">support@dgc.gov.kh</a
+              href="mailto:support@mptc.gov.kh"
+              class="hover:text-white transition-colors">support@mptc.gov.kh</a
             >
           </li>
           <li class="flex items-start gap-2">
@@ -73,39 +72,74 @@ const t = useTranslations(lang);
               size={20}
               strokeWidth={2}
             />
-            <span class="leading-relaxed"
-              >Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh,
-              Phnom Penh, Cambodia, 120210</span
-            >
+            <address class="leading-relaxed">
+              Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh,
+              Phnom Penh, Cambodia, 120210
+            </address>
           </li>
         </ul>
       </div>
     </div>
 
-    <div class="flex place-content-end gap-5 mt-12">
-      <a href="#" aria-label="LinkedIn" class="text-white hover:opacity-80">
+    <nav class="flex place-content-end gap-5 mt-12" aria-label="navigation">
+      <a
+        title="LinkedIn"
+        href="/#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        class="text-white hover:opacity-80"
+      >
         <Linkedin size={24} strokeWidth={2} />
       </a>
-      <a href="#" aria-label="Twitter" class="text-white hover:opacity-80">
+      <a
+        title="Twitter"
+        href="/#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Twitter"
+        class="text-white hover:opacity-80"
+      >
         <Twitter size={24} strokeWidth={2} />
       </a>
-      <a href="#" aria-label="Telegram" class="text-white hover:opacity-80">
+      <a
+        title="Telegram"
+        href="/#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Telegram"
+        class="text-white hover:opacity-80"
+      >
         <Send size={24} strokeWidth={2} />
       </a>
-      <a href="#" aria-label="YouTube" class="text-white hover:opacity-80">
+      <a
+        title="YouTube"
+        href="/#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="YouTube"
+        class="text-white hover:opacity-80"
+      >
         <Youtube size={24} strokeWidth={2} />
       </a>
-      <a href="#" aria-label="Facebook" class="text-white hover:opacity-80">
+      <a
+        title="Facebook"
+        href="/#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+        class="text-white hover:opacity-80"
+      >
         <Facebook size={24} strokeWidth={2} />
       </a>
-    </div>
+    </nav>
 
     <div class="border-t-2 border-white mt-12 pt-8">
       <div
         class="flex flex-col md:items-center gap-4 md:flex-row md:justify-between"
       >
         <p class="text-xs md:text-base text-right md:text-left">
-          &copy;2025 Ministry Of Post And Telecommunications
+          &copy;{currentYear} Ministry Of Post And Telecommunications
         </p>
 
         <div class="flex items-center gap-2 place-self-end">
