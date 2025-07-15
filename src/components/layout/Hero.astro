@@ -9,8 +9,8 @@ const lang = Astro.params.lang as keyof typeof languages;
 const t = useTranslations(lang);
 ---
 
-<section id="hero" aria-label="hero-header" class="py-20 md:py-28 bg-white">
-  <header
+<div id="hero" aria-label="hero-header" class="py-20 md:py-28 bg-white">
+  <div
     class="container text-center mx-auto px-4 sm:px-6 lg:px-8 lg:w-1/2 md:w-2/3 w-full"
   >
     <h1 id="hero-header">
@@ -25,8 +25,8 @@ const t = useTranslations(lang);
     >
       {t("hero.description")}
     </p>
-  </header>
-</section>
+  </div>
+</div>
 
 <figure class="mt-15 mx-auto w-full max-w-full">
   <Image
