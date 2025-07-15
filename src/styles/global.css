@@ -122,3 +122,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+h1 {
+  font-size: 3em;
+  @apply font-bold gap-y-10 mb-6 leading-[1.3];
+}

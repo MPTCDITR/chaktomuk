@@ -21,6 +21,7 @@ const languageSwitcherHref = `/${targetLang}${currentRoute === "/" ? "" : curren
 ---
 
 <a
+  title={`Switch to ${targetLangLabel}`}
   href={languageSwitcherHref}
   class="rounded-full border border-primary"
 >
@@ -30,5 +31,6 @@ const languageSwitcherHref = `/${targetLang}${currentRoute === "/" ? "" : curren
     class="w-full h-full"
     width={38}
     height={38}
+    loading="lazy"
   />
 </a>
