@@ -16,14 +16,12 @@ const t = useTranslations(lang);
     class="flex flex-col items-center justify-center"
   >
     <h2 id="features-heading" class="text-4xl font-bold mb-2 text-primary">
-      Our Features
+      {t('features.heading')}
     </h2>
     <article
       class="text-lg text-muted-foreground font-normal mb-9 md:w-2/3 w-full text-center"
     >
-      Chaktomuk is a secure digital platform designed for government entities,
-      offering vital tools for streamlining workflows, automating tasks, and
-      analyzing operations.
+      {t('features.description.1')}
     </article>
   </header>
   <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
@@ -36,10 +34,11 @@ const t = useTranslations(lang);
         height={354}
       />
       <div class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5">
-        <h3 class="text-2xl font-bold text-primary text-center mb-4">Design</h3>
+        <h3 class="text-2xl font-bold text-primary text-center mb-4">
+          {t('features.title.1')}
+        </h3>
         <p class="text-lg text-black leading-snug">
-          Design and configuration of digital workflows easily and effortlessly,
-          build forms, create portals and dashboards — all without writing code.
+          {t('features.description.2')}
         </p>
       </div>
     </div>
@@ -54,11 +53,10 @@ const t = useTranslations(lang);
       />
       <div class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5">
         <h3 class="text-2xl font-bold text-primary text-center mb-4">
-          Automate
+          {t('features.title.2')}
         </h3>
         <p class="text-lg text-black leading-snug">
-          Simplifies work by automating tasks, tracking assignments, managing
-          departments, and securely handling documents
+          {t("features.description.2")}
         </p>
       </div>
     </div>
@@ -75,11 +73,10 @@ const t = useTranslations(lang);
         class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5 lg:col-span-1 md:col-span-2"
       >
         <h3 class="text-2xl font-bold text-primary text-center mb-4">
-          Analytic
+          {t("features.title.3")}
         </h3>
         <p class="text-lg text-black leading-snug">
-          Provides users with real-time insights into staff activity, workflow
-          performance, and departmental operations and analytics tools.
+          {t("features.description.3")}
         </p>
       </div>
     </div>
