@@ -1,5 +1,7 @@
+import type { ui } from "@/i18n/ui";
+
 export interface StateProps {
-  title: string;
+  title:  keyof (typeof ui)["en"];
   count: number;
   header: string;
 }
@@ -8,15 +10,15 @@ type StateType = Omit<StateProps, "header">;
 
 export const states: StateType[] = [
   {
-    title: "Users",
-    count: 340,
+    title: "state.title.1",
+    count: 3490,
   },
   {
-    title: "Processed Flows",
+    title: "state.title.2",
     count: 3340,
   },
   {
-    title: "Total Processes",
+    title: "state.title.3",
     count: 502000,
   },
 ];
