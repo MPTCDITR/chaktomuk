@@ -3,6 +3,12 @@
 import { Image } from "astro:assets";
 import ctm from "@/assets/logo/logo-ctm_white.png";
 import mptc from "@/assets/logo/mptc.svg";
+import type { languages } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+
+const lang = Astro.params.lang as keyof typeof languages;
+const t = useTranslations(lang);
+
 import {
   Facebook,
   Linkedin,
@@ -34,7 +40,9 @@ const currentYear = new Date().getFullYear();
         </a>
       </div>
       <div>
-        <h3 class="text-2xl font-bold mb-4" id="other-links">Other Links</h3>
+        <h3 class="text-2xl font-bold mb-4" id="other-links">
+          {t("footer.title.1")}
+        </h3>
         <ul class="space-y-3" aria-labelledby="other-links">
           <li>
             <a
@@ -42,7 +50,9 @@ const currentYear = new Date().getFullYear();
               target="_blank"
               rel="noopener noreferrer"
               class="underline hover:text-white transition-colors"
-              >Ministry Of Post And Telecommunication</a
+              >
+              {t("footer.description.1")}
+              </a
             >
           </li>
           <li>
@@ -51,19 +61,25 @@ const currentYear = new Date().getFullYear();
               target="_blank"
               rel="noopener noreferrer"
               class="underline hover:text-white transition-colors"
-              >Digital Government Committee</a
+              >
+              {t("footer.description.2")}
+              </a
             >
           </li>
         </ul>
       </div>
       <div>
-        <h3 class="text-2xl font-bold mb-4" id="contact-us">Contact us</h3>
+        <h3 class="text-2xl font-bold mb-4" id="contact-us">
+          {t("footer.title.2")}
+        </h3>
         <ul class="space-y-3" aria-labelledby="contact-us">
           <li class="flex items-center gap-2">
             <Mail className="text-white" size={20} strokeWidth={2} />
             <a
               href="mailto:support@mptc.gov.kh"
-              class="hover:text-white transition-colors">support@mptc.gov.kh</a
+              class="hover:text-white transition-colors">
+              {t("footer.description.3")}
+              </a
             >
           </li>
           <li class="flex items-start gap-2">
@@ -73,8 +89,7 @@ const currentYear = new Date().getFullYear();
               strokeWidth={2}
             />
             <address class="leading-relaxed">
-              Building 13, Monivong Blvd, Sangkat Srah Chak, Khan Daun Penh,
-              Phnom Penh, Cambodia, 120210
+              {t("footer.description.4")}
             </address>
           </li>
         </ul>
@@ -139,11 +154,14 @@ const currentYear = new Date().getFullYear();
         class="flex flex-col md:items-center gap-4 md:flex-row md:justify-between"
       >
         <p class="text-xs md:text-base text-right md:text-left">
-          &copy;{currentYear} Ministry Of Post And Telecommunications
+          &copy;{currentYear} 
+          {t("footer.description.5")}
         </p>
 
         <div class="flex items-center gap-2 place-self-end">
-          <span class="text-xs md:text-base text-white">Powered By</span>
+          <span class="text-xs md:text-base text-white">
+            {t("footer.description.6")}
+          </span>
           <Image
             src={mptc}
             alt="MPTC Logo"

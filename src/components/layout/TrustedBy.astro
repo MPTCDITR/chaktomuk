@@ -7,6 +7,11 @@ import trc from "@/assets/logo/TRC-Logo.jpg";
 import cadt from "@/assets/logo/logo-cadt.png";
 import cp from "@/assets/logo/Cambodia-Post-Logo.png";
 import tc from "@/assets/logo/logo-tc.png";
+import { useTranslations } from "@/i18n/utils";
+import { languages } from "@/i18n/ui";
+
+const lang = Astro.params.lang as keyof typeof languages;
+const t = useTranslations(lang);
 ---
 
 <section id="trusted-by" aria-label="trusted-by" class="bg-accent/30">
@@ -18,7 +23,7 @@ import tc from "@/assets/logo/logo-tc.png";
       class="text-4xl font-bold uppercase text-primary mb-8"
       aria-labelledby="trusted-by"
     >
-      Trusted By
+      {t("trusted.title")}
     </h2>
     <ul
       class="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 justify-center items-center gap-6"
