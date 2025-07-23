@@ -45,8 +45,8 @@ export const ui = {
     "features.title.3": "Analytic",
     "features.description.3": "Provides users with real-time insights into staff activity, workflow performance, and departmental operations and analytics tools. ",
 
-    // Why Us
-    "whyus.heading": "Why Should Be Us?",
+    // Key Benefits
+    "whyus.heading": "Key Benefits",
     "whyus.description.1": "simplifies government work by bringing everything into one secure digital platform. It helps users design custom workflows, automate routine tasks, manage documents, and gain real-time insights — all in one place.",
     "whyus.title.1": "Work Smarter and Faster",
     "whyus.description.2": "Chaktomuk streamlines everyday tasks and approvals through automation, helping users reduce manual work, avoid delays, and focus on what matters most.",
@@ -108,8 +108,8 @@ export const ui = {
     "features.title.3": "ភាពវិភាគ",
     "features.description.3": "ផ្តល់ឱ្យអ្នកប្រើប្រាស់នូវការយល់ដឹងតាមពេលវេលាជាក់ស្តែងអំពីសកម្មភាពបុគ្គលិក ដំណើរការការងារ និងប្រតិបត្តិការរបស់នាយកដ្ឋាន និងឧបករណ៍វិភាគ។",
     
-    // Why Us
-    "whyus.heading": "ហេតុអ្វីត្រូវជាយើង?",
+    // Keys Benfits
+    "whyus.heading": "អត្ថប្រយោជន៍សំខាន់ៗ",
     "whyus.description.1": "សម្រួលការងាររបស់រដ្ឋាភិបាលដោយនាំយកអ្វីគ្រប់យ៉ាងទៅក្នុងថ្នាលឌីជីថលដែលមានសុវត្ថិភាពមួយ។ វាជួយអ្នកប្រើប្រាស់រចនាដំណើរការងារផ្ទាល់ខ្លួន ធ្វើកិច្ចការប្រចាំថ្ងៃដោយស្វ័យប្រវត្តិ គ្រប់គ្រងឯកសារ និងទទួលបានការយល់ដឹងតាមពេលវេលាជាក់ស្តែង — ទាំងអស់នៅកន្លែងតែមួយ។",
     "whyus.title.1": "ធ្វើការឆ្លាតជាងមុន និងលឿនជាងមុន",
     "whyus.description.2": "ចតុមុខសម្រួលកិច្ចការប្រចាំថ្ងៃ និងការអនុម័តតាមរយៈស្វ័យប្រវត្តិកម្ម ជួយអ្នកប្រើប្រាស់កាត់បន្ថយការងារដោយដៃ ជៀសវាងការពន្យារពេល និងផ្តោតលើអ្វីដែលសំខាន់បំផុត។",
