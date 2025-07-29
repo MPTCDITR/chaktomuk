@@ -1,11 +1,11 @@
 ---
 // src/pages/TrustedBy.astro
 import { Image } from "astro:assets";
-import dgc from "@/assets/logo/dgc.svg";
-import mptc from "@/assets/logo/logo-mptc.png";
-import trc from "@/assets/logo/TRC-Logo.jpg";
-import cadt from "@/assets/logo/logo-cadt.png";
-import cp from "@/assets/logo/Cambodia-Post-Logo.png";
+import dgc from "@/assets/logo/dgc-logo.png";
+import mptc from "@/assets/logo/mptc-logo.png";
+import trc from "@/assets/logo/TRC-Logo.png";
+import cadt from "@/assets/logo/cadt-logo.png";
+import cp from "@/assets/logo/cp-logo.png";
 import tc from "@/assets/logo/logo-tc.png";
 import { useTranslations } from "@/i18n/utils";
 import { languages } from "@/i18n/ui";
@@ -35,7 +35,7 @@ const t = useTranslations(lang);
           alt="MPTC Logo"
           width={558}
           height={551}
-          class="xl:w-[200px] xl:h-[200px] w-[168px] h-[168px] lg:object-cover md:object-contain object-cover mx-auto"
+          class="w-[165px] h-[165px] object-contain mx-auto"
         />
       </li>
       <li aria-label="DGC Logo">
@@ -44,7 +44,7 @@ const t = useTranslations(lang);
           alt="DGC Logo"
           width={558}
           height={551}
-          class="w-[258px] h-[251px] xl:object-cover object-contain mx-auto"
+          class="w-[165px] h-[165px] object-contain mx-auto"
         />
       </li>
       <li aria-label="TRC Logo">
@@ -71,7 +71,7 @@ const t = useTranslations(lang);
           alt="CP Logo"
           width={558}
           height={551}
-          class="w-[160px] h-[160px] object-contain mx-auto"
+          class="w-[158px] h-[151px] object-contain mx-auto"
         />
       </li>
       <li aria-label="TC Logo" class="lg:col-span-1 md:col-span-2">
