@@ -1,31 +1,31 @@
 ---
-// src/components/WhyUs.astro
 import { Image } from "astro:assets";
-import whyus from "@/assets/images/why_us.png";
-import { ChartNoAxesCombined, ListTodo, ScrollText } from "lucide-react";
+import whyUs from "@/assets/images/why_us.png";
 import { useTranslations } from "@/i18n/utils";
 import { languages } from "@/i18n/ui";
+import { KeyBenefitData } from "@/data/KeyBenefitData";
+import BenefitKeyItem from "@/components/BenefitKeyItem.astro";
 const lang = Astro.params.lang as keyof typeof languages;
 const t = useTranslations(lang);
 ---
 
-<section class="py-16 md:py-24">
+<section aria-label="key benefits" class="py-16 md:py-24">
   <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center max-w-3xl mx-auto">
-      <h2 class="text-primary text-[40px] font-bold mb-4">
+    <header class="text-center max-w-5xl mx-auto">
+      <h2 class="text-primary text-4xl font-bold mb-4">
         {t("whyus.heading")}
       </h2>
-      <p class="text-base text-muted-foreground">
+      <p class="md:text-lg text-base text-muted-foreground">
         {t("whyus.description.1")}
       </p>
-    </div>
+    </header>
 
     <div
       class="grid grid-cols-1 lg:grid-cols-12 lg:gap-16 lg:items-center mt-16 md:mt-20"
     >
       <div class="lg:col-span-7">
         <Image
-          src={whyus}
+          src={whyUs}
           alt="A mockup of the Chaktomuk platform interface"
           class="w-full h-auto"
           width={800}
@@ -34,49 +34,13 @@ const t = useTranslations(lang);
       </div>
 
       <div class="lg:col-span-5 mt-12 lg:mt-0">
-        <div class="flex flex-col gap-10">
-          <div class="flex items-start gap-4">
-            <div class="flex-shrink-0 text-primary">
-              <ListTodo strokeWidth={2} className="w-8 h-8" />
-            </div>
-            <div>
-              <h2 class="text-xl font-bold text-primary mb-1">
-                {t("whyus.title.1")}
-              </h2>
-              <p class="text-muted-foreground">
-                {t("whyus.description.2")}
-              </p>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-4">
-            <div class="flex-shrink-0 text-primary">
-              <ScrollText strokeWidth={2} className="w-8 h-8" />
-            </div>
-            <div>
-              <h2 class="text-xl font-bold text-primary mb-1">
-                {t("whyus.title.2")}
-              </h2>
-              <p class="text-muted-foreground">
-                {t("whyus.description.3")}
-              </p>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-4">
-            <div class="flex-shrink-0 text-primary">
-              <ChartNoAxesCombined strokeWidth={2} className="w-8 h-8" />
-            </div>
-            <div>
-              <h2 class="text-xl font-bold text-primary mb-1">
-                {t("whyus.title.3")}
-              </h2>
-              <p class="text-muted-foreground">
-                {t("whyus.description.4")}
-              </p>
-            </div>
-          </div>
-        </div>
+        <ul class="space-y-10">
+          {
+            KeyBenefitData.map((benefit) => (
+              <BenefitKeyItem {...benefit} lang={lang} />
+            ))
+          }
+        </ul>
       </div>
     </div>
   </div>

@@ -9,8 +9,8 @@ const lang = Astro.params.lang as keyof typeof languages;
 const t = useTranslations(lang);
 ---
 
-<section aria-label="stats" class="container mx-auto my-16">
-  <div class="flex justify-around items-center flex-wrap gap-8 md:gap-12">
+<section aria-label="stats" class="container mx-auto my-20">
+  <div class="flex justify-around items-center flex-wrap gap-12">
     {
       states.map((state) => (
         <StateCard
@@ -18,7 +18,6 @@ const t = useTranslations(lang);
           title={state.title}
           count={stateNumberDisplay(state.count)}
           header={state.title}
-          class="p-6"
         />
       ))
     }

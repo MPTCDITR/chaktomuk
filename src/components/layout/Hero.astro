@@ -1,5 +1,4 @@
 ---
-// src/components/Hero.astro
 import { Image } from "astro:assets";
 import homepage from "@/assets/images/homepage.jpg";
 import { useTranslations } from "@/i18n/utils";
@@ -9,33 +8,30 @@ const lang = Astro.params.lang as keyof typeof languages;
 const t = useTranslations(lang);
 ---
 
-<div id="hero" aria-label="hero-header" class="py-20 md:py-28 bg-white">
+<header id="hero" aria-label="hero-header" class="pt-20 md:pt-28">
   <div
-    class="container text-center mx-auto px-4 sm:px-6 lg:px-8 lg:w-1/2 md:w-2/3 w-full"
+    class="container flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 lg:w-1/2 md:w-2/3 w-full"
   >
     <h1 id="hero-header">
       {t("hero.title.1")}
-      <span class="bg-primary text-white px-3 rounded-xl">
+      <span class="bg-primary text-white px-3 py-1 rounded-xl">
         {t("hero.title.2")}
       </span>
     </h1>
-    <p
-      id="hero-description"
-      class="text-lg sm:text-base text-muted-foreground font-normal mx-auto"
-    >
+    <p id="hero-description" class="sm:text-lg text-base text-muted-foreground">
       {t("hero.description")}
     </p>
   </div>
-</div>
 
-<figure class="mt-15 mx-auto w-full max-w-full">
-  <Image
-    src={homepage}
-    alt={t("hero.description")}
-    width={1280}
-    height={853}
-    class="w-full h-full"
-    aria-labelledby="hero-header"
-    loading={"eager"}
-  />
-</figure>
+  <figure class="mt-15 mx-auto w-full max-w-full">
+    <Image
+      src={homepage}
+      alt={t("hero.description")}
+      width={1280}
+      height={853}
+      class="w-full h-full"
+      aria-labelledby="hero-header"
+      loading={"eager"}
+    />
+  </figure>
+</header>
