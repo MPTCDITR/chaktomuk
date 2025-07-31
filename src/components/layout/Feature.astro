@@ -1,6 +1,6 @@
 ---
 // src/components/Features.astro
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 import design from "@/assets/images/design.png";
 import automate from "@/assets/images/automate.png";
 import analytic from "@/assets/images/analytic.png";
@@ -13,13 +13,13 @@ const t = useTranslations(lang);
 <section class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-16">
   <header
     aria-label="features-heading"
-    class="flex flex-col items-center justify-center"
+    class="flex flex-col items-center justify-center text-center"
   >
     <h2 id="features-heading" class="text-4xl font-bold mb-2 text-primary">
       {t("features.heading")}
     </h2>
     <article
-      class="text-lg text-muted-foreground font-normal mb-9 md:w-2/3 w-full text-center"
+      class="text-lg text-muted-foreground font-normal mb-9 md:w-2/3 w-full"
     >
       {t("features.description.1")}
     </article>
@@ -33,7 +33,9 @@ const t = useTranslations(lang);
         width={330}
         height={354}
       />
-      <div class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5">
+      <div
+        class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5 text-center"
+      >
         <h3 class="text-2xl font-bold text-primary text-center mb-4">
           {t("features.title.1")}
         </h3>
@@ -51,7 +53,9 @@ const t = useTranslations(lang);
         width={330}
         height={354}
       />
-      <div class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5">
+      <div
+        class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5 text-center"
+      >
         <h3 class="text-2xl font-bold text-primary text-center mb-4">
           {t("features.title.2")}
         </h3>
@@ -70,12 +74,12 @@ const t = useTranslations(lang);
         height={354}
       />
       <div
-        class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5 lg:col-span-1 md:col-span-2"
+        class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5 lg:col-span-1 md:col-span-2 text-center"
       >
-        <h3 class="text-2xl font-bold text-primary text-center mb-4">
+        <h3 class="text-2xl font-bold text-primary mb-4">
           {t("features.title.3")}
         </h3>
-        <p class="text-lg text-center text-black leading-snug">
+        <p class="text-lg text-black leading-snug">
           {t("features.description.3")}
         </p>
       </div>
