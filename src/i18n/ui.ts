@@ -14,13 +14,10 @@ export type TranslationKey = keyof (typeof ui)[typeof defaultLang];
 export const ui = {
   en: {
     "site.title": "Chaktomuk Digital Platform",
-    "site.description": "",
+    "site.description": "Chaktomuk is a robust digital workspace created by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency in Cambodia. It aims to simplify internal workflows and foster collaboration, enabling agencies to operate more effectively and transparently in a digital landscape.",
 
     // nav
     "nav.home": "Home",
-    "nav.about": "About Us",
-    "nav.services": "Services",
-    "nav.contact": "Contact",
 
     // hero
     "hero.title.1": "Chaktomuk Digital ",
@@ -36,7 +33,7 @@ export const ui = {
     "trusted.title": "Trusted By",
 
     // Our Features
-    "features.heading": "Our Features.",
+    "features.heading": "Our Features",
     "features.description": "Chaktomuk is a secure digital platform designed for government entities, offering vital tools for streamlining workflows, automating tasks, and analyzing operations. ",
     "features.title.1": "Design",
     "features.description.1": "Design and configuration of digital workflows easily and effortlessly, build forms, create portals and dashboards — all without writing code.",
@@ -76,13 +73,10 @@ export const ui = {
   },
   km: {
     "site.title": "ថ្នាលចតុមុខឌីជីថល",
-    "site.description": "",
+    "site.description": "Chaktomuk is a robust digital workspace created by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency in Cambodia. It aims to simplify internal workflows and foster collaboration, enabling agencies to operate more effectively and transparently in a digital landscape.",
     // nav
 
     "nav.home": "ទំព័រដើម",
-    "nav.about": "អំពី​ពួកយើង",
-    "nav.services": "សេវាកម្ម",
-    "nav.contact": "ទំនាក់ទំនង",
     // hero
 
     "hero.title.1": "ថ្នាលចតុមុខ",

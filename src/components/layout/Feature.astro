@@ -1,17 +1,20 @@
 ---
-// src/components/Features.astro
-import { Image } from "astro:assets";
-import design from "@/assets/images/design.png";
-import automate from "@/assets/images/automate.png";
-import analytic from "@/assets/images/analytic.png";
 import { useTranslations } from "@/i18n/utils";
 import { languages } from "@/i18n/ui";
+import { featureData } from "@/data/FeatureData";
+
+import FeatureCard from "../FeatureCard.astro";
+
 const lang = Astro.params.lang as keyof typeof languages;
 const t = useTranslations(lang);
 ---
 
-<section class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl py-16">
+<section
+  aria-label="features"
+  class="container mx-auto px-4 md:px-2 sm:px-6 max-w-7xl pt-16"
+>
   <header
+    aria-labelledby="features"
     aria-label="features-heading"
     class="flex flex-col items-center justify-center text-center"
   >
@@ -24,65 +27,16 @@ const t = useTranslations(lang);
       {t("features.description.1")}
     </article>
   </header>
-  <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-    <div class="relative shadow-md rounded-xl md:col-span-1 col-span-2 w-full">
-      <Image
-        src={design}
-        alt="Visual representation of digital workflow design and no-code configuration."
-        class="w-full h-full rounded-lg object-cover"
-        width={330}
-        height={354}
-      />
-      <div
-        class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5 text-center"
-      >
-        <h3 class="text-2xl font-bold text-primary text-center mb-4">
-          {t("features.title.1")}
-        </h3>
-        <p class="text-lg text-black leading-snug">
-          {t("features.description.2")}
-        </p>
-      </div>
-    </div>
-
-    <div class="relative mx-auto md:col-span-1 col-span-2 w-full">
-      <Image
-        src={automate}
-        alt="illustrating automated task management and document handling."
-        class="w-full h-full rounded-lg object-cover"
-        width={330}
-        height={354}
-      />
-      <div
-        class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5 text-center"
-      >
-        <h3 class="text-2xl font-bold text-primary text-center mb-4">
-          {t("features.title.2")}
-        </h3>
-        <p class="text-lg text-center text-black leading-snug">
-          {t("features.description.2")}
-        </p>
-      </div>
-    </div>
-
-    <div class="relative mx-auto lg:col-span-1 col-span-2 w-full md:max-w-sm">
-      <Image
-        src={analytic}
-        alt="Dashboard displaying data insights for staff activity and workflow performance."
-        class="w-full h-full rounded-lg object-cover"
-        width={330}
-        height={354}
-      />
-      <div
-        class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5 lg:col-span-1 md:col-span-2 text-center"
-      >
-        <h3 class="text-2xl font-bold text-primary mb-4">
-          {t("features.title.3")}
-        </h3>
-        <p class="text-lg text-black leading-snug">
-          {t("features.description.3")}
-        </p>
-      </div>
-    </div>
-  </div>
+  <ul class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+    {
+      featureData.map((feature, idx) => (
+        <li
+          aria-label={feature.alt}
+          class={`${idx === 2 ? "lg:col-span-1 md:col-span-2 col-span-1" : "lg:col-span-1"}`}
+        >
+          <FeatureCard {...feature} lang={lang} />
+        </li>
+      ))
+    }
+  </ul>
 </section>

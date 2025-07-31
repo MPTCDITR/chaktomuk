@@ -1,6 +1,4 @@
 ---
-// src/pages/[lang]/index.astro
-
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/layout/Hero.astro";
 import TrustedBy from "@/components/layout/TrustedBy.astro";
@@ -11,6 +9,7 @@ import Stats from "@/components/layout/Stats.astro";
 
 import { languages } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
+import type { TypeLang } from "@/lib/types";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((langKey) => {
@@ -20,7 +19,7 @@ export async function getStaticPaths() {
   });
 }
 
-const lang = Astro.params.lang as keyof typeof languages;
+const lang = Astro.params.lang as TypeLang;
 const t = useTranslations(lang);
 ---
 
