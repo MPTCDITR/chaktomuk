@@ -1,12 +1,13 @@
 ---
-// src/components/Stats.astro
-
-import { useTranslations } from "@/i18n/utils";
-import { languages } from "@/i18n/ui";
 import { stateNumberDisplay, states } from "@/constants/statistic";
 import StateCard from "../StateCard.astro";
-const lang = Astro.params.lang as keyof typeof languages;
-const t = useTranslations(lang);
+import type { TypeLang } from "@/lib/types";
+
+interface Props {
+  lang: TypeLang;
+}
+
+const { lang } = Astro.props;
 ---
 
 <section aria-label="stats" class="container mx-auto my-20">
@@ -14,10 +15,9 @@ const t = useTranslations(lang);
     {
       states.map((state) => (
         <StateCard
-          key={state.title}
           title={state.title}
           count={stateNumberDisplay(state.count)}
-          header={state.title}
+          lang={lang}
         />
       ))
     }

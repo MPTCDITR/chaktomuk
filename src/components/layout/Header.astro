@@ -2,6 +2,11 @@
 import { Image } from "astro:assets";
 import logoCtm from "@/assets/logo/logo-ctm.png";
 import LanguageSwitcher from "../languageSwitcher.astro";
+import type { TypeLang } from "@/lib/types";
+
+interface Props {
+  lang: TypeLang;
+}
 
 const { lang } = Astro.props;
 ---

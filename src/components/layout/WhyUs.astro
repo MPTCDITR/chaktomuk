@@ -2,10 +2,15 @@
 import { Image } from "astro:assets";
 import whyUs from "@/assets/images/why_us.png";
 import { useTranslations } from "@/i18n/utils";
-import { languages } from "@/i18n/ui";
 import { KeyBenefitData } from "@/data/KeyBenefitData";
 import BenefitKeyItem from "@/components/BenefitKeyItem.astro";
-const lang = Astro.params.lang as keyof typeof languages;
+import type { TypeLang } from "@/lib/types";
+
+interface Props {
+  lang: TypeLang;
+}
+
+const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 

@@ -1,19 +1,18 @@
 ---
-// src/layouts/Layout.astro
 import Header from "@/components/layout/Header.astro";
 import Footer from "@/components/layout/Footer.astro";
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import { languages } from "@/i18n/ui";
+import { useTranslations } from "../i18n/utils";
 import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
 import BaseHead from "@/components/BaseHead.astro";
+
 interface Props {
   title: string;
   description?: string;
+  lang: TypeLang;
 }
 
-const { title, description } = Astro.props;
+const { title, description, lang } = Astro.props;
 const ImageURL = new URL("/assets/logo/ctm-icon.png", Astro.url).href;
-const lang = getLangFromUrl(Astro.url) as TypeLang;
 const t = useTranslations(lang);
 
 import "../styles/global.css";
@@ -29,10 +28,10 @@ import type { TypeLang } from "@/lib/types";
     />
   </head>
   <body>
-    <Header lang={lang} t={t} />
+    <Header lang={lang} />
     <main>
       <slot />
     </main>
-    <Footer lang={lang} t={t} />
+    <Footer lang={lang} />
   </body>
 </html>

@@ -14,16 +14,16 @@ import type { TypeLang } from "@/lib/types";
 export async function getStaticPaths() {
   return Object.keys(languages).map((langKey) => {
     return {
-      params: { lang: langKey },
+      params: { lang: langKey as TypeLang },
     };
   });
 }
 
-const lang = Astro.params.lang as TypeLang;
+const { lang } = Astro.params;
 const t = useTranslations(lang);
 ---
 
-<Layout title={t("nav.home")}>
+<Layout title={t("nav.home")} lang={lang}>
   <Hero lang={lang} />
   <Stats lang={lang} />
   <TrustedBy lang={lang} />
