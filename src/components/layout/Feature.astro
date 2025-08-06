@@ -1,11 +1,15 @@
 ---
 import { useTranslations } from "@/i18n/utils";
-import { languages } from "@/i18n/ui";
 import { featureData } from "@/data/FeatureData";
 
 import FeatureCard from "../FeatureCard.astro";
+import type { TypeLang } from "@/lib/types";
 
-const lang = Astro.params.lang as keyof typeof languages;
+interface Props {
+  lang: TypeLang;
+}
+
+const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 

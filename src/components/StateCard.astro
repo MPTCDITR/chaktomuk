@@ -1,10 +1,14 @@
 ---
-import type { StateProps } from "@/constants/statistic";
-import type { languages } from "@/i18n/ui";
+import type { TypeLang, UiTranslateKey } from "@/lib/types";
 import { useTranslations } from "@/i18n/utils";
 
-const { title, count } = Astro.props as StateProps;
-const lang = Astro.params.lang as keyof typeof languages;
+interface Props {
+  lang: TypeLang;
+  title: UiTranslateKey;
+  count: string;
+}
+
+const { title, count, lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 

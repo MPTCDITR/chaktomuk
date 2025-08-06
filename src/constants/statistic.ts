@@ -1,7 +1,7 @@
 import type { ui } from "@/i18n/ui";
 
 export interface StateProps {
-  title:  keyof (typeof ui)["en"];
+  title: keyof (typeof ui)["en"];
   count: number;
   header: string;
 }
@@ -23,7 +23,7 @@ export const states: StateType[] = [
   },
 ];
 
-export const stateNumberDisplay = (stateNum: number) => {
+export const stateNumberDisplay = (stateNum: number): string => {
   if (stateNum > 1000) {
     return `${(stateNum / 1000).toFixed(1)}K+`;
   } else {
