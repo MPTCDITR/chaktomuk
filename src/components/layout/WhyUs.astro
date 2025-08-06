@@ -10,7 +10,7 @@ interface Props {
   lang: TypeLang;
 }
 
-const { lang } = Astro.props as Props;
+const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
