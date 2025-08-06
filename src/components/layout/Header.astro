@@ -2,8 +2,13 @@
 import { Image } from "astro:assets";
 import logoCtm from "@/assets/logo/logo-ctm.png";
 import LanguageSwitcher from "../languageSwitcher.astro";
+import type { TypeLang } from "@/lib/types";
 
-const { lang } = Astro.props;
+interface Props {
+  lang: TypeLang;
+}
+
+const { lang } = Astro.props as Props;
 ---
 
 <nav class="py-4 bg-white border-b border-muted sticky top-0 z-50">

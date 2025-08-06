@@ -2,9 +2,13 @@
 import { Image } from "astro:assets";
 import homepage from "@/assets/images/homepage.jpg";
 import { useTranslations } from "@/i18n/utils";
-import { languages } from "@/i18n/ui";
+import type { TypeLang } from "@/lib/types";
 
-const lang = Astro.params.lang as keyof typeof languages;
+interface Props {
+  lang: TypeLang;
+}
+
+const { lang } = Astro.props as Props;
 const t = useTranslations(lang);
 ---
 
