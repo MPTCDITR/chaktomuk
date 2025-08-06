@@ -1,5 +1,4 @@
 ---
-// src/pages/TrustedBy.astro
 import { Image } from "astro:assets";
 import dgc from "@/assets/logo/dgc-logo.png";
 import mptc from "@/assets/logo/mptc-logo.png";
@@ -8,9 +7,13 @@ import cadt from "@/assets/logo/cadt-logo.png";
 import cp from "@/assets/logo/cp-logo.png";
 import tc from "@/assets/logo/logo-tc.png";
 import { useTranslations } from "@/i18n/utils";
-import { languages } from "@/i18n/ui";
+import type { TypeLang } from "@/lib/types";
 
-const lang = Astro.params.lang as keyof typeof languages;
+interface Props {
+  lang: TypeLang;
+}
+
+const { lang } = Astro.props as Props;
 const t = useTranslations(lang);
 ---
 
