@@ -8,7 +8,7 @@ interface Props extends FeatureCardProps {
   lang: TypeLang;
 }
 
-const { srcImage, alt, title, description, lang } = Astro.props as Props;
+const { srcImage, alt, title, description, lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
