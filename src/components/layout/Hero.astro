@@ -1,8 +1,9 @@
 ---
-import { Image } from "astro:assets";
-import homepage from "@/assets/images/homepage.jpg";
 import { useTranslations } from "@/i18n/utils";
 import type { TypeLang } from "@/lib/types";
+
+import banner from "@/assets/images/banner.png";
+import { Image } from "astro:assets";
 
 interface Props {
   lang: TypeLang;
@@ -12,30 +13,35 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<header id="hero" aria-label="hero-header" class="pt-20 md:pt-28">
-  <div
-    class="container flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 lg:w-1/2 md:w-2/3 w-full"
-  >
-    <h1 id="hero-header">
-      {t("hero.title.1")}
-      <span class="bg-primary text-white px-3 py-1 rounded-xl">
-        {t("hero.title.2")}
-      </span>
-    </h1>
-    <p id="hero-description" class="sm:text-lg text-base text-muted-foreground">
-      {t("hero.description")}
-    </p>
-  </div>
-
-  <figure class="mt-15 mx-auto w-full max-w-full">
+<section class="h-[578px]" aria-label="Hero section">
+  <div class="relative h-full">
     <Image
-      src={homepage}
-      alt={t("hero.description")}
-      width={1280}
-      height={853}
-      class="w-full h-full"
-      aria-labelledby="hero-header"
-      loading={"eager"}
+      src={banner}
+      alt="Chaktokmuk Digital Platform banner"
+      width={1440}
+      height={578}
+      class="w-full h-full object-cover"
+      loading="eager"
+      priority
     />
-  </figure>
-</header>
+    <div
+      class="absolute inset-0 z-10 w-full h-full bg-gradient-to-r from-white to-transparent"
+    >
+      <div class="container h-full flex flex-col justify-center space-y-4">
+        <header class="space-y-4">
+          <h1 class="text-5xl md:text-6xl font-bold text-primary leading-tight">
+            {t("hero.title.1")}
+            <br />
+            {t("hero.title.2")}
+          </h1>
+          <p class="text-base text-muted-foreground italic">
+            {t("hero.quote")}
+          </p>
+        </header>
+        <article class="text-base text-foreground max-w-4xl">
+          {t("hero.description")}
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
