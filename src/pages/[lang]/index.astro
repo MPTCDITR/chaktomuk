@@ -6,6 +6,7 @@ import Feature from "@/components/layout/Feature.astro";
 import About from "@/components/layout/About.astro";
 import WhyUs from "@/components/layout/WhyUs.astro";
 import Stats from "@/components/layout/Stats.astro";
+import SupportedDevices from "@/components/layout/SupportedDevices.astro";
 
 import { languages } from "@/i18n/ui";
 import { useTranslations } from "@/i18n/utils";
@@ -25,6 +26,7 @@ const t = useTranslations(lang);
 
 <Layout title={t("nav.home")} lang={lang}>
   <Hero lang={lang} />
+  <SupportedDevices lang={lang} />
   <Stats lang={lang} />
   <TrustedBy lang={lang} />
   <Feature lang={lang} />

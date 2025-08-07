@@ -28,6 +28,11 @@ export const ui = {
     "hero.description":
       "Chaktomuk is a robust digital workspace created by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency in Cambodia. It aims to simplify internal workflows and foster collaboration, enabling agencies to operate more effectively and transparently in a digital landscape.",
 
+    // supported devices
+    "supported.devices.heading": "Supported Devices",
+    "supported.devices.description":
+      "Our 'Chaktomuk' is fully compatible with all devices, whether you're using a desktop, tablet, or mobile. Enjoy seamless access on any screen!",
+
     //state
     "state.title.1": "User",
     "state.title.2": "Processed Flows",
@@ -97,6 +102,10 @@ export const ui = {
       "Chaktomuk is a robust digital workspace created by the Ministry of Post and Telecommunications.",
     "hero.description":
       "ចតុមុខគឺជាថ្នាលឌីជីថលដែលអាចប្រតិបត្តិការងារបានយ៉ាងប្រសិទ្ធភាពបង្កើតឡើងដោយក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ (ប.ទ.ក) ដើម្បីបង្កើនប្រសិទ្ធភាពរបស់រដ្ឋាភិបាលក្នុងប្រទេសកម្ពុជា។ គោលបំណងគឺធ្វើឱ្យដំណើរការងារផ្ទៃក្នុងមានភាពងាយស្រួល និងជំរុញកិច្ចសហការ ដែលអនុញ្ញាតឱ្យភ្នាក់ងារធ្វើប្រតិបត្តិការប្រកបដោយប្រសិទ្ធភាព និងតម្លាភាពក្នុងទិដ្ឋភាពឌីជីថល។",
+
+    "supported.devices.heading": "Supported Devices",
+    "supported.devices.description":
+      "Our 'Chaktomuk' is fully compatible with all devices, whether you're using a desktop, tablet, or mobile. Enjoy seamless access on any screen!",
 
     //state
     "state.title.1": "អ្នកប្រើប្រាស់",
