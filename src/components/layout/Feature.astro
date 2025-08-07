@@ -31,13 +31,12 @@ const t = useTranslations(lang);
       {t("features.description.1")}
     </article>
   </header>
-  <ul class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+  <ul
+    class="grid md:grid-cols-2 grid-cols-1 gap-5 2xl:max-w-7xl max-w-5xl mx-auto"
+  >
     {
-      featureData.map((feature, idx) => (
-        <li
-          aria-label={feature.alt}
-          class={`${idx === 2 ? "lg:col-span-1 md:col-span-2 col-span-1" : "lg:col-span-1"}`}
-        >
+      featureData.map((feature) => (
+        <li aria-label={feature.alt}>
           <FeatureCard {...feature} lang={lang} />
         </li>
       ))
