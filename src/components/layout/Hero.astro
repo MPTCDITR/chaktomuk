@@ -13,14 +13,14 @@ const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<section class="h-[578px]" aria-label="Hero section">
+<section aria-label="Hero section">
   <div class="relative h-full">
     <Image
       src={banner}
       alt="Chaktokmuk Digital Platform banner"
       width={1440}
       height={578}
-      class="w-full h-full object-cover"
+      class="w-full object-cover min-h-[400px] md:min-h-[578px] max-h-full"
       loading="eager"
       priority
     />
