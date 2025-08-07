@@ -128,11 +128,6 @@
   }
 }
 
-h1 {
-  font-size: 3em;
-  @apply font-bold gap-y-10 mb-6 leading-[1.3];
-}
-
 .feature-card-bg {
   background: linear-gradient(to top,
       rgba(255, 255, 255, 0.74) 70%,
