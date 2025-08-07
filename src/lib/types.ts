@@ -1,6 +1,7 @@
 import { defaultLang, languages } from "@/i18n/ui";
 
 import { ui } from "@/i18n/ui";
+import type { ImageMetadata } from "astro";
 
 export type UiTranslateKey = keyof (typeof ui)[typeof defaultLang];
 
