@@ -4,6 +4,7 @@ import type { UiTranslateKey } from "@/lib/types";
 import designFeature from "@/assets/images/design.png";
 import automateFeature from "@/assets/images/automate.png";
 import analyticFeature from "@/assets/images/analytic.png";
+import collaborationFeature from "@/assets/images/collaboration.png";
 
 export interface FeatureCardProps {
   srcImage: ImageMetadata;
@@ -30,5 +31,11 @@ export const featureData: Array<FeatureCardProps> = [
     alt: "analytic feature",
     title: "features.title.3",
     description: "features.description.3",
+  },
+  {
+    srcImage: collaborationFeature,
+    alt: "collaboration feature",
+    title: "features.title.4",
+    description: "features.description.4",
   },
 ];
