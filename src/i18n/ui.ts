@@ -54,6 +54,9 @@ export const ui = {
     "features.title.3": "Analytic",
     "features.description.3":
       "Provides users with real-time insights into staff activity, workflow performance, and departmental operations and analytics tools. ",
+    "features.title.4": "Collaboration",
+    "features.description.4":
+      "Work seamlessly across departments to coordindate approvals, share information and make decisions together with shared workflows, document access, real-time chat, and collaborative editing.",
 
     // Why Us
     "whyus.heading": "Why Should Be Us?",
@@ -128,6 +131,9 @@ export const ui = {
     "features.title.3": "ភាពវិភាគ",
     "features.description.3":
       "ផ្តល់ឱ្យអ្នកប្រើប្រាស់នូវការយល់ដឹងតាមពេលវេលាជាក់ស្តែងអំពីសកម្មភាពបុគ្គលិក ដំណើរការការងារ និងប្រតិបត្តិការរបស់នាយកដ្ឋាន និងឧបករណ៍វិភាគ។",
+    "features.title.4": "Collaboration",
+    "features.description.4":
+      "Work seamlessly across departments to coordindate approvals, share information and make decisions together with shared workflows, document access, real-time chat, and collaborative editing.",
 
     // Why Us
     "whyus.heading": "ហេតុអ្វីត្រូវជាយើង?",
