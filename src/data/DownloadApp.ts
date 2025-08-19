@@ -1,17 +1,17 @@
 import type { AppDownloadCardProps } from "@/lib/types";
 
-import appStoreIcon from "@/assets/images/playstore.png";
-import googlePlayIcon from "@/assets/images/appstore.png";
+import appStoreIcon from "@/assets/images/Apple-Logosu.png";
+import googlePlayIcon from "@/assets/images/Android_robot.svg.png";
 
 export const DownloadApp: Array<AppDownloadCardProps> = [
   {
     title: "Chaktomuk",
-    appIcon: appStoreIcon,
-    appName: "App Store",
+    appIcon: googlePlayIcon,
+    appName: "Android",
   },
   {
     title: "Chaktomuk",
-    appIcon: googlePlayIcon,
-    appName: "Google Play",
+    appIcon: appStoreIcon,
+    appName: "iOS",
   },
 ];

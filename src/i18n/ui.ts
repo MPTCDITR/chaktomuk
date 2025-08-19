@@ -23,10 +23,9 @@ export const ui = {
     // hero
     "hero.title.1": "Chaktomuk",
     "hero.title.2": "Digital Platform",
-    "hero.quote":
-      "Chaktomuk is a robust digital workspace created by the Ministry of Post and Telecommunications.",
+    "hero.quote": "Digital Government Workspace",
     "hero.description":
-      "Chaktomuk is a robust digital workspace created by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency in Cambodia. It aims to simplify internal workflows and foster collaboration, enabling agencies to operate more effectively and transparently in a digital landscape.",
+      "Chaktomuk is a digital workspace by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency with the aims to digitalized workflows, foster collaboration, and enabling more effectively operations.",
 
     // supported devices
     "supported.devices.heading": "Supported Devices",
@@ -101,10 +100,9 @@ export const ui = {
 
     "hero.title.1": "ចតុមុខ",
     "hero.title.2": "ថ្នាលឌីជីថល",
-    "hero.quote":
-      "Chaktomuk is a robust digital workspace created by the Ministry of Post and Telecommunications.",
+    "hero.quote": "Digital Government Workspace",
     "hero.description":
-      "ចតុមុខគឺជាថ្នាលឌីជីថលដែលអាចប្រតិបត្តិការងារបានយ៉ាងប្រសិទ្ធភាពបង្កើតឡើងដោយក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍ (ប.ទ.ក) ដើម្បីបង្កើនប្រសិទ្ធភាពរបស់រដ្ឋាភិបាលក្នុងប្រទេសកម្ពុជា។ គោលបំណងគឺធ្វើឱ្យដំណើរការងារផ្ទៃក្នុងមានភាពងាយស្រួល និងជំរុញកិច្ចសហការ ដែលអនុញ្ញាតឱ្យភ្នាក់ងារធ្វើប្រតិបត្តិការប្រកបដោយប្រសិទ្ធភាព និងតម្លាភាពក្នុងទិដ្ឋភាពឌីជីថល។",
+      "Chaktomuk is a digital workspace by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency with the aims to digitalized workflows, foster collaboration, and enabling more effectively operations.",
 
     "supported.devices.heading": "Supported Devices",
     "supported.devices.description":
