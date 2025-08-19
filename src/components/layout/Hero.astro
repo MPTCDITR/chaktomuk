@@ -2,8 +2,7 @@
 import { useTranslations } from "@/i18n/utils";
 import type { TypeLang } from "@/lib/types";
 
-import banner from "@/assets/images/banner.png";
-import { Image } from "astro:assets";
+import banner from "@/asset/Comp.-CTM-Header.gif";
 
 interface Props {
   lang: TypeLang;
@@ -14,15 +13,14 @@ const t = useTranslations(lang);
 ---
 
 <section aria-label="Hero section">
-  <div class="relative h-[400px] sm:h-[500px] md:h-[600px] lg:h-[578px]">
-    <Image
-      src={banner}
+  <div class="relative h-[400px] sm:h-[400px] md:h-[500px] lg:h-[678px]">
+    <img
+      src={banner.src}
       alt="Chaktokmuk Digital Platform banner"
       width={1440}
       height={578}
       class="w-full h-full object-cover"
       loading="eager"
-      priority
     />
     <div
       class="absolute inset-0 z-10 w-full h-full bg-gradient-to-r from-white/90 to-transparent"
@@ -43,7 +41,7 @@ const t = useTranslations(lang);
           </p>
         </header>
         <article
-          class="text-sm sm:text-base text-foreground max-w-full sm:max-w-3xl md:max-w-4xl"
+          class="text-sm sm:text-base text-foreground max-w-full sm:max-w-xl md:max-w-2xl"
         >
           {t("hero.description")}
         </article>

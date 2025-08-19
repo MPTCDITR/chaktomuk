@@ -7,7 +7,7 @@ export type UiTranslateKey = keyof (typeof ui)[typeof defaultLang];
 
 export type TypeLang = keyof typeof languages;
 
-export type AppName = "App Store" | "Google Play";
+export type AppName = "Android" | "IOS";
 
 export interface AppDownloadCardProps {
   title: string;
