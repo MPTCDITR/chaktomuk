@@ -1,10 +1,10 @@
 import type { UiTranslateKey } from "@/lib/types";
 
 // assets
-import designFeature from "@/assets/images/design.png";
-import automateFeature from "@/assets/images/automate.png";
-import analyticFeature from "@/assets/images/analytic.png";
-import collaborationFeature from "@/assets/images/collaboration.png";
+import designFeature from "@/assets/images/Design.jpg";
+import automateFeature from "@/assets/images/Automate.jpg";
+import analyticFeature from "@/assets/images/Analytic.jpg";
+import collaborationFeature from "@/assets/images/Collabration.jpg";
 
 export interface FeatureCardProps {
   srcImage: ImageMetadata;
