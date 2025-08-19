@@ -1,1 +1,11 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+const ImageURL = new URL("/assets/logo/ctm-icon.png", Astro.url).href;
+---
+
 <meta http-equiv="refresh" content="0;url=/km/" />
+<BaseHead
+  title={"Chaktokmuk Digital Platform"}
+  description={"Chaktokmuk Digital Platform"}
+  ogImage={ImageURL}
+/>
