@@ -2,7 +2,7 @@
 import { useTranslations } from "@/i18n/utils";
 import type { TypeLang } from "@/lib/types";
 
-import banner from "@/assets/images/Comp-CTM-Header.gif";
+import heroVideo from "@/asset/video/hero.mp4";
 
 interface Props {
   lang: TypeLang;
@@ -13,15 +13,16 @@ const t = useTranslations(lang);
 ---
 
 <section aria-label="Hero section">
-  <div class="relative h-[400px] sm:h-[400px] md:h-[500px] lg:h-[678px]">
-    <img
-      src={banner.src}
-      alt="Chaktokmuk Digital Platform banner"
-      width={1440}
-      height={578}
-      class="w-full h-full object-cover"
-      loading="eager"
-    />
+  <div
+    class="relative h-[400px] sm:h-[400px] md:h-[500px] lg:h-[678px] overflow-hidden"
+  >
+    <video
+      class="absolute inset-0 w-full h-full object-cover"
+      src={heroVideo}
+      autoplay
+      muted
+      playsinline
+      preload="auto"></video>
     <div
       class="absolute inset-0 z-10 w-full h-full bg-gradient-to-r from-white/90 to-transparent"
     >
