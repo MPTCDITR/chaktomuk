@@ -1,25 +1,33 @@
 ---
-// src/components/layout/Header.astro
 import { Image } from "astro:assets";
-import logoctm from "@/assets/logo/logo-ctm.png";
+import logoCtm from "@/assets/logo/logo-ctm.png";
+import LanguageSwitcher from "../languageSwitcher.astro";
+import type { TypeLang } from "@/lib/types";
 
-// Import the LanguageSwitcher component
-import LanguageSwitcher from "@/components/layout/languageSwitcher.astro";
+interface Props {
+  lang: TypeLang;
+}
 
 const { lang } = Astro.props;
 ---
 
-<header class="py-4 bg-white border-b border-muted sticky top-0 z-50">
-  <div class="mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-    <a href={`/${lang}/`} class="flex items-center gap-2">
+<nav class="py-4 bg-white border-b border-muted sticky top-0 z-50">
+  <div class="container flex justify-between items-center">
+    <a
+      title="Chaktokmuk Digital Platform"
+      href={`/${lang}/`}
+      class="flex items-center gap-2"
+    >
       <Image
-        src={logoctm}
+        src={logoCtm}
         alt={"header.logoAlt"}
         class="w-full h-full"
         width={125}
         height={30}
+        loading="lazy"
+        priority
       />
     </a>
     <LanguageSwitcher lang={lang} />
   </div>
-</header>
+</nav>

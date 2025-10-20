@@ -1,93 +1,45 @@
 ---
-// src/components/Features.astro
-import Image from "astro/components/Image.astro";
-import design from "@/assets/images/design.png";
-import automate from "@/assets/images/automate.png";
-import analytic from "@/assets/images/analytic.png";
 import { useTranslations } from "@/i18n/utils";
-import { languages } from "@/i18n/ui";
-const lang = Astro.params.lang as keyof typeof languages;
+import { featureData } from "@/data/FeatureData";
+
+import FeatureCard from "../FeatureCard.astro";
+import type { TypeLang } from "@/lib/types";
+
+interface Props {
+  lang: TypeLang;
+}
+
+const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<section id="features" class="py-1 bg-white">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-7xl">
-    <h2 class="text-[40px] font-bold mb-2 text-primary">Our Features</h2>
-    <p
-      class="text-base text-muted-foreground font-normal mb-9 max-w-3xl mx-auto"
+<section
+  aria-label="features"
+  class="container mx-auto px-4 md:px-2 sm:px-6 max-w-7xl pt-16"
+>
+  <header
+    aria-labelledby="features"
+    aria-label="features-heading"
+    class="flex flex-col items-center justify-center text-center"
+  >
+    <h2 id="features-heading" class="text-4xl font-bold mb-2 text-primary">
+      {t("features.heading")}
+    </h2>
+    <article
+      class="text-lg text-muted-foreground font-normal mb-9 md:w-2/3 w-full"
     >
-      Chaktomuk is a secure digital platform designed for government entities,
-      offering vital tools for streamlining workflows, automating tasks, and
-      analyzing operations.
-    </p>
-    <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-      <div
-        class="relative shadow-md rounded-xl md:col-span-1 col-span-2 w-full"
-      >
-        <Image
-          src={design}
-          alt="Visual representation of digital workflow design and no-code configuration."
-          class="w-full h-full rounded-lg object-fill"
-          width={330}
-          height={354}
-        />
-        <div class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5">
-          <h3
-            class="text-3xl md:text-4xl font-bold text-primary text-center mb-4"
-          >
-            Design
-          </h3>
-          <p class="text-base text-black leading-snug">
-            Design and configuration of digital workflows easily and
-            effortlessly, build forms, create portals and dashboards — all
-            without writing code.
-          </p>
-        </div>
-      </div>
-
-      <div class="relative mx-auto md:col-span-1 col-span-2 w-full">
-        <Image
-          src={automate}
-          alt="Image illustrating automated task management and document handling."
-          class="w-full h-full rounded-lg object-fill"
-          width={330}
-          height={354}
-        />
-        <div class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5">
-          <h3
-            class="text-3xl md:text-4xl font-bold text-primary text-center mb-4"
-          >
-            Automate
-          </h3>
-          <p class="text-base text-black leading-snug">
-            Simplifies work by automating tasks, tracking assignments, managing
-            departments, and securely handling documents
-          </p>
-        </div>
-      </div>
-
-      <div class="relative mx-auto lg:col-span-1 col-span-2 w-full md:max-w-sm">
-        <Image
-          src={analytic}
-          alt="Dashboard displaying data insights for staff activity and workflow performance."
-          class="w-full h-full rounded-lg object-fill"
-          width={330}
-          height={354}
-        />
-        <div
-          class="absolute bottom-0 left-0 right-0 backdrop-blur-[2px] p-5 lg:col-span-1 md:col-span-2"
-        >
-          <h3
-            class="text-3xl md:text-4xl font-bold text-primary text-center mb-4"
-          >
-            Analytic
-          </h3>
-          <p class="text-base text-black leading-snug">
-            Provides users with real-time insights into staff activity, workflow
-            performance, and departmental operations and analytics tools.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+      {t("features.description")}
+    </article>
+  </header>
+  <ul
+    class="grid md:grid-cols-2 grid-cols-1 gap-5 2xl:max-w-7xl max-w-5xl mx-auto"
+  >
+    {
+      featureData.map((feature) => (
+        <li aria-label={feature.alt}>
+          <FeatureCard {...feature} lang={lang} />
+        </li>
+      ))
+    }
+  </ul>
 </section>

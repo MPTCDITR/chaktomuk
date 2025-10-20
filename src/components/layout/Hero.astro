@@ -1,0 +1,52 @@
+---
+import { useTranslations } from "@/i18n/utils";
+import type { TypeLang } from "@/lib/types";
+
+import heroVideo from "@/asset/video/hero.mp4";
+
+interface Props {
+  lang: TypeLang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section aria-label="Hero section">
+  <div
+    class="relative h-[400px] sm:h-[400px] md:h-[500px] lg:h-[678px] overflow-hidden"
+  >
+    <video
+      class="absolute inset-0 w-full h-full object-cover"
+      src={heroVideo}
+      autoplay
+      muted
+      playsinline
+      preload="auto"></video>
+    <div
+      class="absolute inset-0 z-10 w-full h-full bg-gradient-to-r from-white/90 to-transparent"
+    >
+      <div
+        class="container h-full flex flex-col justify-center space-y-3 sm:space-y-4 px-4"
+      >
+        <header class="space-y-2 sm:space-y-4">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight"
+          >
+            {t("hero.title.1")}
+            <br />
+            {t("hero.title.2")}
+          </h1>
+          <p class="text-sm sm:text-base text-muted-foreground italic">
+            {t("hero.quote")}
+          </p>
+        </header>
+        <article
+          class="text-sm sm:text-base text-foreground max-w-full sm:max-w-xl md:max-w-2xl"
+        >
+          {t("hero.description")}
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,51 @@
+---
+import { DownloadApp } from "@/data/DownloadApp";
+import type { TypeLang } from "@/lib/types";
+import AppDownloadCard from "../AppDownloadCard.astro";
+import supportedDevicesImage from "@/assets/images/supperted-device-mockup.png";
+import { Image } from "astro:assets";
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  lang: TypeLang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section aria-label="Supported devices" class="overflow-hidden">
+  <div class="container pt-14 md:flex items-center gap-6 space-y-6">
+    <div class="space-y-5">
+      <header class="space-y-2">
+        <h2
+          class="2xl:text-4xl md:text-5xl text-4xl font-semibold text-primary"
+        >
+          {t("supported.devices.heading")}
+        </h2>
+        <article
+          id="supported-devices-description"
+          class="text-base text-muted-foreground max-w-4xl"
+        >
+          {t("supported.devices.description")}
+        </article>
+      </header>
+      <nav
+        aria-labelledby="download-options"
+        class="flex items-center gap-4 lg:flex-row flex-col"
+      >
+        <h3 id="download-options" class="sr-only">Download Options</h3>
+        {DownloadApp.map((app) => <AppDownloadCard {...app} />)}
+      </nav>
+    </div>
+    <Image
+      src={supportedDevicesImage}
+      alt="Supported devices"
+      width={1000}
+      height={1000}
+      class="lg:w-2/3 w-full 2xl:ml-60"
+      loading="eager"
+      priority
+    />
+  </div>
+</section>

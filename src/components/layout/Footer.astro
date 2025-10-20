@@ -1,0 +1,177 @@
+---
+import { Image } from "astro:assets";
+import ctm from "@/assets/logo/logo-ctm_white.png";
+import mptc from "@/assets/logo/mptc-logo.png";
+import { useTranslations } from "@/i18n/utils";
+
+import {
+  Facebook,
+  Linkedin,
+  Mail,
+  MapPin,
+  Send,
+  Twitter,
+  Youtube,
+} from "lucide-react";
+import type { TypeLang } from "@/lib/types";
+
+interface Props {
+  lang: TypeLang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer id="contact" class="bg-primary text-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
+    <div class="md:grid md:grid-cols-3 gap-8 md:gap-12 space-y-8 md:space-y-0">
+      <div
+        class="md:col-span-1 col-span-2 flex justify-center md:justify-start"
+        aria-label="logo"
+      >
+        <a href="/" class="mb-4" aria-label="Chaktomuk Logo">
+          <Image
+            src={ctm}
+            alt="Chaktomuk Logo"
+            width={225}
+            height={63}
+            loading="lazy"
+          />
+        </a>
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold mb-4" id="other-links">
+          {t("footer.title.1")}
+        </h3>
+        <ul class="space-y-3" aria-labelledby="other-links">
+          <li>
+            <a
+              href="https://mptc.gov.kh/en/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:text-white transition-colors"
+            >
+              {t("footer.description.1")}
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.dgc.gov.kh/en"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="underline hover:text-white transition-colors"
+            >
+              {t("footer.description.2")}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold mb-4" id="contact-us">
+          {t("footer.title.2")}
+        </h3>
+        <ul class="space-y-3" aria-labelledby="contact-us">
+          <li class="flex items-center gap-2">
+            <Mail className="text-white" size={20} strokeWidth={2} />
+            <a
+              href="mailto:support@mptc.gov.kh"
+              class="hover:text-white transition-colors"
+            >
+              {t("footer.description.3")}
+            </a>
+          </li>
+          <li class="flex items-start gap-2">
+            <MapPin
+              className="text-white mt-1 flex-shrink-0"
+              size={20}
+              strokeWidth={2}
+            />
+            <address class="leading-relaxed">
+              {t("footer.description.4")}
+            </address>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex place-content-end gap-5 mt-12" aria-label="social-media">
+      <a
+        title="LinkedIn"
+        href="/#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn"
+        class="text-white hover:opacity-80"
+      >
+        <Linkedin size={24} strokeWidth={2} />
+      </a>
+      <a
+        title="Twitter"
+        href="/#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Twitter"
+        class="text-white hover:opacity-80"
+      >
+        <Twitter size={24} strokeWidth={2} />
+      </a>
+      <a
+        title="Telegram"
+        href="/#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Telegram"
+        class="text-white hover:opacity-80"
+      >
+        <Send size={24} strokeWidth={2} />
+      </a>
+      <a
+        title="YouTube"
+        href="/#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="YouTube"
+        class="text-white hover:opacity-80"
+      >
+        <Youtube size={24} strokeWidth={2} />
+      </a>
+      <a
+        title="Facebook"
+        href="/#"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook"
+        class="text-white hover:opacity-80"
+      >
+        <Facebook size={24} strokeWidth={2} />
+      </a>
+    </div>
+
+    <div class="border-t-2 border-white mt-12 pt-8">
+      <div
+        class="flex flex-col md:items-center gap-4 md:flex-row md:justify-between"
+      >
+        <p class="text-xs md:text-base text-right md:text-left">
+          &copy;{currentYear}
+          {t("footer.description.5")}
+        </p>
+
+        <div class="flex items-center gap-2 place-self-end">
+          <span class="text-xs md:text-base text-white">
+            {t("footer.description.6")}
+          </span>
+          <Image
+            src={mptc}
+            alt="MPTC Logo"
+            width={258}
+            height={251}
+            class="w-12 h-12 object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

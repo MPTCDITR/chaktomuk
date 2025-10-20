@@ -1,35 +1,11 @@
 ---
-// src/pages/index.astro
-
-import Layout from "@/layouts/Layout.astro";
-import Hero from "@/components/layout/Hero.astro";
-import Stats from "@/components/layout/Stats.astro";
-import TrustedBy from "@/components/layout/TrustedBy.astro";
-import Feature from "@/components/layout/Feature.astro";
-import About from "@/components/layout/About.astro";
-import { useTranslations } from "@/i18n/utils";
-import WhyUs from "@/components/layout/WhyUs.astro";
-import { languages } from "@/i18n/ui";
-
-export async function getStaticPaths() {
-  return Object.keys(languages).map((langKey) => {
-    return {
-      params: { lang: langKey },
-    };
-  });
-}
-
-const lang = Astro.params.lang as keyof typeof languages;
-const t = useTranslations(lang);
+import BaseHead from "@/components/BaseHead.astro";
+const ImageURL = new URL("/assets/logo/ctm-icon.png", Astro.url).href;
 ---
 
-<Layout title={t("site.title")}>
-  <main>
-    <Hero lang={lang} />
-    <Stats lang={lang} />
-    <TrustedBy lang={lang} />
-    <Feature lang={lang} />
-    <WhyUs lang={lang} />
-    <About lang={lang} />
-  </main>
-</Layout>
+<meta http-equiv="refresh" content="0;url=/km/" />
+<BaseHead
+  title={"Chaktokmuk Digital Platform"}
+  description={"Chaktokmuk Digital Platform"}
+  ogImage={ImageURL}
+/>

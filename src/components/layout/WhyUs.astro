@@ -1,0 +1,45 @@
+---
+import { useTranslations } from "@/i18n/utils";
+import { KeyBenefitData } from "@/data/KeyBenefitData";
+import BenefitKeyItem from "@/components/BenefitKeyItem.astro";
+import type { TypeLang } from "@/lib/types";
+import KeyBenefitLottie from "../KeyBenefitLottie";
+
+interface Props {
+  lang: TypeLang;
+}
+
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<section aria-label="key benefits" class="py-16 md:py-24">
+  <div class="max-w-7xl mx-auto px-4">
+    <header class="text-center max-w-5xl mx-auto">
+      <h2 class="text-primary text-4xl font-bold mb-4">
+        {t("whyus.heading")}
+      </h2>
+      <p class="md:text-lg text-base text-muted-foreground">
+        {t("whyus.description.1")}
+      </p>
+    </header>
+
+    <div
+      class="grid grid-cols-1 lg:grid-cols-12 lg:gap-16 lg:items-center mt-16 md:mt-20"
+    >
+      <div class="lg:col-span-7">
+        <KeyBenefitLottie client:only />
+      </div>
+
+      <div class="lg:col-span-5 mt-12 lg:mt-0">
+        <ul class="space-y-10">
+          {
+            KeyBenefitData.map((benefit) => (
+              <BenefitKeyItem {...benefit} lang={lang} />
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

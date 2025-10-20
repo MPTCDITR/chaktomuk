@@ -1,30 +1,91 @@
 ---
-// src/pages/TrustedBy.astro
 import { Image } from "astro:assets";
-import dgc from "@/assets/logo/dgc.svg";
-import mptc from "@/assets/logo/logo-mptc.png";
-import trc from "@/assets/logo/logo-trc.png";
-import cadt from "@/assets/logo/logo-cadt.png";
-import cp from "@/assets/logo/logo-cp.png";
+import dgc from "@/assets/logo/dgc-logo.png";
+import mptc from "@/assets/logo/mptc-logo.png";
+import trc from "@/assets/logo/trc-logo.png";
+import cadt from "@/assets/logo/cadt-logo.png";
+import cp from "@/assets/logo/cp-logo.png";
 import tc from "@/assets/logo/logo-tc.png";
 import { useTranslations } from "@/i18n/utils";
-import { languages } from "@/i18n/ui";
-const lang = Astro.params.lang as keyof typeof languages;
+import type { TypeLang } from "@/lib/types";
+
+interface Props {
+  lang: TypeLang;
+}
+
+const { lang } = Astro.props;
 const t = useTranslations(lang);
 ---
 
-<section class="py-16 bg-box">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <h3 class="text-[32px] font-bold uppercase text-primary mb-8">
-      Trusted By
-    </h3>
-    <div class="flex flex-wrap justify-center items-center gap-x-9 gap-y-8">
-      <Image src={mptc} alt="MPTC Logo" width={158} height={151} />
-      <Image src={dgc} alt="DGC Logo" width={158} height={151} />
-      <Image src={trc} alt="trc Logo" width={113} height={105} />
-      <Image src={cadt} alt="MPTC Logo" width={224.25} height={133} />
-      <Image src={cp} alt="CP Logo" width={110} height={106} />
-      <Image src={tc} alt="TC Logo" width={124} height={119} />
-    </div>
+<section id="trusted-by" aria-label="trusted-by" class="bg-accent/30">
+  <div
+    class="container mx-auto px-4 sm:px-6 lg:px-8 text-center py-16"
+    aria-labelledby="trusted-by"
+  >
+    <h2
+      class="text-4xl font-bold uppercase text-primary mb-8"
+      aria-labelledby="trusted-by"
+    >
+      {t("trusted.title")}
+    </h2>
+    <ul
+      class="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 justify-center items-center gap-6"
+      aria-labelledby="trusted-by"
+    >
+      <li aria-label="MPTC Logo">
+        <Image
+          src={mptc}
+          alt="MPTC Logo"
+          width={558}
+          height={551}
+          class="w-[165px] h-[165px] object-contain mx-auto"
+        />
+      </li>
+      <li aria-label="DGC Logo">
+        <Image
+          src={dgc}
+          alt="DGC Logo"
+          width={558}
+          height={551}
+          class="w-[165px] h-[165px] object-contain mx-auto"
+        />
+      </li>
+      <li aria-label="TRC Logo">
+        <Image
+          src={trc}
+          alt="TRC Logo"
+          width={558}
+          height={551}
+          class="w-[165px] h-[165px] object-contain mx-auto"
+        />
+      </li>
+      <li aria-label="CADT Logo">
+        <Image
+          src={cadt}
+          alt="CADT Logo"
+          width={558}
+          height={551}
+          class="w-[158px] h-[151px] object-contain mx-auto"
+        />
+      </li>
+      <li aria-label="CP Logo" class="lg:col-span-1 md:col-span-2">
+        <Image
+          src={cp}
+          alt="CP Logo"
+          width={558}
+          height={551}
+          class="w-[158px] h-[151px] object-contain mx-auto"
+        />
+      </li>
+      <li aria-label="TC Logo" class="lg:col-span-1 md:col-span-2">
+        <Image
+          src={tc}
+          alt="TC Logo"
+          width={558}
+          height={551}
+          class="w-[170px] h-[170px] xl:object-cover object-contain mx-auto"
+        />
+      </li>
+    </ul>
   </div>
 </section>

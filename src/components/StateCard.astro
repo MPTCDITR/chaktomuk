@@ -1,0 +1,18 @@
+---
+import type { TypeLang, UiTranslateKey } from "@/lib/types";
+import { useTranslations } from "@/i18n/utils";
+
+interface Props {
+  lang: TypeLang;
+  title: UiTranslateKey;
+  count: string;
+}
+
+const { title, count, lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<div class="flex flex-col items-center font-bold gap-4 min-w-3xs text-center">
+  <p class="text-5xl text-secondary">{count}</p>
+  <p class="text-3xl text-primary">{t(title)}</p>
+</div>

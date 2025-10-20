@@ -1,29 +1,25 @@
 ---
-// src/components/Stats.astro
+import { stateNumberDisplay, states } from "@/constants/statistic";
+import StateCard from "../StateCard.astro";
+import type { TypeLang } from "@/lib/types";
 
-import { useTranslations } from "@/i18n/utils";
-import { languages } from "@/i18n/ui";
-const lang = Astro.params.lang as keyof typeof languages;
-const t = useTranslations(lang);
+interface Props {
+  lang: TypeLang;
+}
+
+const { lang } = Astro.props;
 ---
 
-<section class="my-16 bg-white">
-  <div class="container mx-auto">
-    <div
-      class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 text-center font-bold gap-5"
-    >
-      <div>
-        <p class="text-5xl text-secondary">340+</p>
-        <p class="text-primary text-2xl">{t("static.title.1")}</p>
-      </div>
-      <div>
-        <p class="text-5xl text-secondary">3.34k+</p>
-        <p class="text-primary text-2xl">Processed Flows</p>
-      </div>
-      <div class="lg:col-span-1 md:col-span-2">
-        <p class="text-5xl text-secondary">502k+</p>
-        <p class="text-primary text-2xl">Total Processes</p>
-      </div>
-    </div>
+<section aria-label="stats" class="container mx-auto my-20">
+  <div class="flex justify-around items-center flex-wrap gap-12">
+    {
+      states.map((state) => (
+        <StateCard
+          title={state.title}
+          count={stateNumberDisplay(state.count)}
+          lang={lang}
+        />
+      ))
+    }
   </div>
 </section>

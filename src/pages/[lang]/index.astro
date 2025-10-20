@@ -1,35 +1,33 @@
 ---
-// src/pages/[lang]/index.astro
-
 import Layout from "@/layouts/Layout.astro";
 import Hero from "@/components/layout/Hero.astro";
-import Stats from "@/components/layout/Stats.astro";
 import TrustedBy from "@/components/layout/TrustedBy.astro";
 import Feature from "@/components/layout/Feature.astro";
-import About from "@/components/layout/About.astro";
-import { useTranslations } from "@/i18n/utils";
 import WhyUs from "@/components/layout/WhyUs.astro";
+import Stats from "@/components/layout/Stats.astro";
+import SupportedDevices from "@/components/layout/SupportedDevices.astro";
+
 import { languages } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import type { TypeLang } from "@/lib/types";
 
 export async function getStaticPaths() {
   return Object.keys(languages).map((langKey) => {
     return {
-      params: { lang: langKey },
+      params: { lang: langKey as TypeLang },
     };
   });
 }
 
-const lang = Astro.params.lang as keyof typeof languages;
+const { lang } = Astro.params;
 const t = useTranslations(lang);
 ---
 
-<Layout title={t("site.title")}>
-  <main>
-    <Hero lang={lang} />
-    <Stats lang={lang} />
-    <TrustedBy lang={lang} />
-    <Feature lang={lang} />
-    <WhyUs lang={lang} />
-    <About lang={lang} />
-  </main>
+<Layout title={t("nav.home")} lang={lang}>
+  <Hero lang={lang} />
+  <SupportedDevices lang={lang} />
+  <Stats lang={lang} />
+  <TrustedBy lang={lang} />
+  <Feature lang={lang} />
+  <WhyUs lang={lang} />
 </Layout>
