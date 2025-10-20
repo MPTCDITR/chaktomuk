@@ -25,7 +25,7 @@ export const ui = {
     "hero.title.2": "Digital Platform",
     "hero.quote": "Digital Government Workspace",
     "hero.description":
-      "Chaktomuk is a digital workspace by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency with the aims to digitalized workflows, foster collaboration, and enabling more effectively operations.",
+      "Chaktomuk is a digital workspace developed by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency with the aims to digitalized workflows, foster collaboration, and enabling more effectively operations.",
 
     // supported devices
     "supported.devices.heading": "Supported Devices",
@@ -58,7 +58,7 @@ export const ui = {
       "Work seamlessly across departments to coordindate approvals, share information and make decisions together with shared workflows and document access.",
 
     // Why Us
-    "whyus.heading": "Why Should Be Us?",
+    "whyus.heading": "Benefits",
     "whyus.description.1":
       "simplifies government work by bringing everything into one secure digital platform. It helps users design custom workflows, automate routine tasks, manage documents, and gain real-time insights — all in one place.",
     "whyus.title.1": "Work Smarter and Faster",
@@ -92,7 +92,7 @@ export const ui = {
   km: {
     "site.title": "ថ្នាលចតុមុខឌីជីថល",
     "site.description":
-      "Chaktomuk is a robust digital workspace created by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency in Cambodia. It aims to simplify internal workflows and foster collaboration, enabling agencies to operate more effectively and transparently in a digital landscape.",
+      "ចតុមុខ គឺជាថ្នាលការងារឌីជីថលមួយដែលបង្កើតឡើងដោយក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ (ក.ប.ទ.) ដើម្បីបង្កើននូវប្រសិទ្ធភាពការងារក្នុងរដ្ឋាភិបាលកម្ពុជា។ ថ្នាលនេះមានគោលបំណង សម្រួលដល់លំហូរការងារផ្ទៃក្នុងកាន់តែនិងលើកកម្ពស់សហប្រតិបត្តិការ ដើម្បីឲ្យស្ថាប័ននានាដំណើរការបានយ៉ាងមានប្រសិទ្ធភាព មានតម្លាភាពក្នុងបរិបទឌីជីថល។",
     // nav
 
     "nav.home": "ទំព័រដើម",
@@ -100,18 +100,18 @@ export const ui = {
 
     "hero.title.1": "ចតុមុខ",
     "hero.title.2": "ថ្នាលឌីជីថល",
-    "hero.quote": "Digital Government Workspace",
+    "hero.quote": "លំហូរការងារឌីជីថលរាជរដ្ឋាភិបាល",
     "hero.description":
-      "Chaktomuk is a digital workspace by the Ministry of Post and Telecommunications (MPTC) to enhance government efficiency with the aims to digitalized workflows, foster collaboration, and enabling more effectively operations.",
+      "ចតុមុខ គឺជាថ្នាលឌីជីថល ដែលបង្កើតឡើងដោយក្រសួងប្រៃសណីយ៍និងទូរគមនាគមន៍ (ក.ប.ទ.) ដើម្បីបង្កើនប្រសិទ្ធភាពក្នុងការងាររដ្ឋាភិបាល ដោយមានគោលបំណងធ្វើឌីជីថលនីយកម្មលើលំហូរការងារ លើកកម្ពស់សហប្រតិបត្តិការ និងបង្កើនប្រសិទ្ធភាពនៃការប្រតិបត្តិការឱ្យកាន់តែមានប្រសិទ្ធភាព។",
 
-    "supported.devices.heading": "Supported Devices",
+    "supported.devices.heading": "ឧបករណ៍ដែលគាំទ្រ",
     "supported.devices.description":
-      "Our 'Chaktomuk' is fully compatible with all devices, whether you're using a desktop, tablet, or mobile. Enjoy seamless access on any screen!",
+      "'ចតុមុខ' របស់យើង អាចប្រើប្រាស់ជាមួយឧបករណ៍គ្រប់ប្រភេទ មិនថាអ្នកកំពុងប្រើប្រាស់កុំព្យូទ័រ ថេប្លេត ឬក៏ទូរស័ព្ទចល័តឡើយ។ អ្នកអាចចូលប្រើប្រាស់បានដោយរលូនលើអេក្រង់គ្រប់ទំហំ!",
 
     //state
     "state.title.1": "អ្នកប្រើប្រាស់",
-    "state.title.2": "ដំណើរការងារដែលបានដំណើរការរួច",
-    "state.title.3": "ចំនួនដំណើរការងារសរុប",
+    "state.title.2": "លំហូរការងារដែលសម្រេច",
+    "state.title.3": "លំហូរការងារសរុប",
 
     //Trusted by
     "trusted.title": "ជាទីទុកចិត្តដោយ",
@@ -119,22 +119,22 @@ export const ui = {
     // Our Features
     "features.heading": "លក្ខណៈពិសេសរបស់យើង",
     "features.description":
-      "ចតុមុខគឺជាថ្នាលឌីជីថលដែលមានសុវត្ថិភាពដែលត្រូវបានរចនាឡើងសម្រាប់អង្គភាពរដ្ឋាភិបាល ដោយផ្តល់ជូននូវឧបករណ៍សំខាន់ៗសម្រាប់សម្រួលដំណើរការងារ ការងារស្វ័យប្រវត្តិកម្ម និងការវិភាគប្រតិបត្តិការ។",
-    "features.title.1": "ភាពរចនាសម្ព័ន្ធ",
+      "ចតុមុខគឺជាថ្នាលឌីជីថលដែលមានសុវត្ថិភាពដែលត្រូវបានរចនាឡើងសម្រាប់អង្គភាពរដ្ឋាភិបាល ដោយផ្តល់ជូននូវឧបករណ៍សំខាន់ៗសម្រាប់សម្រួលដំណើរការងារ ការងារស្វ័យប្រវត្តិកម្ម និងការវិភាគប្រតិបត្តិការ",
+    "features.title.1": "ភាពរចនា",
     "features.description.1":
-      "ការរចនា និងការកំណត់រចនាសម្ព័ន្ធនៃដំណើរការងារតាមបែបឌីជីថលដោយមានភាពងាយស្រួលនិងមិនចាំបាច់មានការខិតខំប្រឹងប្រែង បង្កើតទម្រង់ បង្កើតផតថល និងផ្ទាំងគ្រប់គ្រង — ទាំងអស់ដោយមិនចាំបាច់សរសេរកូដ។",
-    "features.title.2": "ភាពស្វ័យប្រវត្តិ",
+      "ការរៀបចំ និងរចនាសម្ព័ន្ធលំហូរឌីជីថលមានភាពងាយស្រួលនិងពុំមានការលំបាក, បង្កើតទម្រង់បែបបទ, បងើ្កតផតថល និងផ្ទាំងគ្រប់គ្រង់ ដោយពុំតម្រូវការសរសេរកូជ",
+    "features.title.2": "ស្វ័យប្រវត្តិ",
     "features.description.2":
-      "សម្រួលការងារដោយស្វ័យប្រវត្តិកម្ម តាមដានកិច្ចការ គ្រប់គ្រងការងារនាយកដ្ឋាន និងការគ្រប់គ្រងឯកសារប្រកបដោយសុវត្ថិភាព។",
-    "features.title.3": "ភាពវិភាគ",
+      "សម្រួលការងារដោយស្វ័យប្រវត្តិកម្ម តាមដានកិច្ចការ គ្រប់គ្រងការងារនាយកដ្ឋាន និងការគ្រប់គ្រងឯកសារប្រកបដោយសុវត្ថិភាព",
+    "features.title.3": "វិភាគ",
     "features.description.3":
-      "ផ្តល់ឱ្យអ្នកប្រើប្រាស់នូវការយល់ដឹងតាមពេលវេលាជាក់ស្តែងអំពីសកម្មភាពបុគ្គលិក ដំណើរការការងារ និងប្រតិបត្តិការរបស់នាយកដ្ឋាន និងឧបករណ៍វិភាគ។",
-    "features.title.4": "Collaboration",
+      "ផ្តល់ឱ្យអ្នកប្រើប្រាស់នូវសកម្មភាពជាក់ស្តែងរបស់បុគ្គលិក, ដំណើរការលំហូរ, ប្រតិបត្តិការរបស់នាយកដ្ឋាន និងឧបករណ៍វិភាគ",
+    "features.title.4": "សហការ",
     "features.description.4":
-      "Work seamlessly across departments to coordindate approvals, share information and make decisions together with shared workflows and document access.",
+      "មានភាពរលូនពីនាយកដ្ឋានទាំងអស់ក្នុងការសហការអនុម័តការងារ, ចែករំលែកព័ត៌មាន និងការសម្រេចជាមួយការចែករំលែកលំហូរនិងឯកសារ",
 
     // Why Us
-    "whyus.heading": "ហេតុអ្វីត្រូវជាយើង?",
+    "whyus.heading": "អត្ថប្រយោជន៍",
     "whyus.description.1":
       "សម្រួលការងាររបស់រដ្ឋាភិបាលដោយនាំយកអ្វីគ្រប់យ៉ាងទៅក្នុងថ្នាលឌីជីថលដែលមានសុវត្ថិភាពមួយ។ វាជួយអ្នកប្រើប្រាស់រចនាដំណើរការងារផ្ទាល់ខ្លួន ធ្វើកិច្ចការប្រចាំថ្ងៃដោយស្វ័យប្រវត្តិ គ្រប់គ្រងឯកសារ និងទទួលបានការយល់ដឹងតាមពេលវេលាជាក់ស្តែង — ទាំងអស់នៅកន្លែងតែមួយ។",
     "whyus.title.1": "ធ្វើការឆ្លាតជាងមុន និងលឿនជាងមុន",
