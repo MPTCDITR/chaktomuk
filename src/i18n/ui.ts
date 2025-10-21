@@ -30,7 +30,7 @@ export const ui = {
     // supported devices
     "supported.devices.heading": "Supported Devices",
     "supported.devices.description":
-      "Our 'Chaktomuk' is fully compatible with all devices, whether you're using a desktop, tablet, or mobile. Enjoy seamless access on any screen!",
+      "Chaktomuk is fully compatible with all devices, whether you're using a desktop, tablet, or mobile. Enjoy seamless access on any screen!",
 
     //state
     "state.title.1": "User",
@@ -49,7 +49,7 @@ export const ui = {
       "Design and configuration of digital workflows easily and effortlessly, build forms, create portals and dashboards — all without writing code.",
     "features.title.2": "Automate",
     "features.description.2":
-      "Simplifies work by automating tasks, tracking assignments, managing departments, and securely handling documents ",
+      "Simplified work by automating tasks, tracking assignments, managing departments, and securely handling documents ",
     "features.title.3": "Analytic",
     "features.description.3":
       "Provides users with real-time insights into staff activity, workflow performance, and departmental operations and analytics tools. ",
@@ -60,14 +60,14 @@ export const ui = {
     // Why Us
     "whyus.heading": "Benefits",
     "whyus.description.1":
-      "simplifies government work by bringing everything into one secure digital platform. It helps users design custom workflows, automate routine tasks, manage documents, and gain real-time insights — all in one place.",
+      "Simplified government work by bringing everything into one secure digital platform. It helps users design custom workflows, automate routine tasks, manage documents, and gain real-time insights — all in one place.",
     "whyus.title.1": "Work Smarter and Faster",
     "whyus.description.2":
       "Chaktomuk streamlines everyday tasks and approvals through automation, helping users reduce manual work, avoid delays, and focus on what matters most.",
-    "whyus.title.2": "Everything In One Plance",
+    "whyus.title.2": "Everything In One Place",
     "whyus.description.3":
       "With integrated tools for workflow, forms, documents, and analytics, Chaktomuk provides a single, centralized platform to manage all your work efficiently and securely.",
-    "whyus.title.3": "Make Informed Decisions",
+    "whyus.title.3": "Data Driven Decision Making",
     "whyus.description.4":
       "Real-time dashboards and reports give users — especially leaders — clear visibility into operations, performance, and team activity, supporting smarter, data-driven decisions.",
 
@@ -106,7 +106,7 @@ export const ui = {
 
     "supported.devices.heading": "ឧបករណ៍ដែលគាំទ្រ",
     "supported.devices.description":
-      "'ចតុមុខ' របស់យើង អាចប្រើប្រាស់ជាមួយឧបករណ៍គ្រប់ប្រភេទ មិនថាអ្នកកំពុងប្រើប្រាស់កុំព្យូទ័រ ថេប្លេត ឬក៏ទូរស័ព្ទចល័តឡើយ។ អ្នកអាចចូលប្រើប្រាស់បានដោយរលូនលើអេក្រង់គ្រប់ទំហំ!",
+      "ចតុមុខ អាចប្រើប្រាស់ជាមួយឧបករណ៍គ្រប់ប្រភេទ មិនថាអ្នកកំពុងប្រើប្រាស់កុំព្យូទ័រ ថេប្លេត ឬក៏ទូរស័ព្ទចល័តឡើយ។ អ្នកអាចចូលប្រើប្រាស់បានដោយរលូនលើអេក្រង់គ្រប់ទំហំ!",
 
     //state
     "state.title.1": "អ្នកប្រើប្រាស់",
