@@ -2,8 +2,6 @@
 import { useTranslations } from "@/i18n/utils";
 import type { TypeLang } from "@/lib/types";
 
-import heroVideo from "@/asset/video/hero.mp4";
-
 interface Props {
   lang: TypeLang;
 }
@@ -18,7 +16,7 @@ const t = useTranslations(lang);
   >
     <video
       class="absolute inset-0 w-full h-full object-cover"
-      src={heroVideo}
+      src="/assets/video/hero.webm"
       autoplay
       muted
       playsinline
