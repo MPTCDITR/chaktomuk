@@ -78,20 +78,26 @@ const currentYear = new Date().getFullYear();
             <Mail className="text-white" size={20} strokeWidth={2} />
             <a
               href="mailto:support@mptc.gov.kh"
-              class="hover:text-white transition-colors"
+              class="hover:text-white transition-colors hover:underline"
             >
               {t("footer.description.3")}
             </a>
           </li>
-          <li class="flex items-start gap-2">
-            <MapPin
-              className="text-white mt-1 flex-shrink-0"
-              size={20}
-              strokeWidth={2}
-            />
-            <address class="leading-relaxed">
-              {t("footer.description.4")}
-            </address>
+          <li>
+            <a
+              href="https://maps.app.goo.gl/qp7QYqPvWjHxajap7"
+              target="_blank"
+              class="flex items-start gap-2 hover:underline"
+            >
+              <MapPin
+                className="text-white mt-1 flex-shrink-0"
+                size={20}
+                strokeWidth={2}
+              />
+              <address class="leading-relaxed">
+                {t("footer.description.4")}
+              </address></a
+            >
           </li>
         </ul>
       </div>
