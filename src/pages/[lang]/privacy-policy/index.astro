@@ -1,0 +1,552 @@
+---
+import { languages } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import Layout from "@/layouts/Layout.astro";
+import type { TypeLang } from "@/lib/types";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((langKey) => {
+    return {
+      params: { lang: langKey as TypeLang },
+    };
+  });
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+---
+
+<Layout title={t("footer.privacyPolicy")} lang={lang}>
+  <section class="bg-accent w-full min-h-screen py-0 md:py-16">
+    <div id="content" class="container px-0 max-w-6xl mx-auto">
+      <article
+        class="bg-white rounded-lg shadow-sm p-6 md:p-8 lg:p-10 space-y-8"
+      >
+        <!-- Header -->
+        <header class="border-b border-border pb-6">
+          <h1 class="text-3xl md:text-4xl font-bold text-primary mb-4">
+            Chaktomuk Terms & Privacy Policy
+          </h1>
+          <div class="space-y-2 text-muted-foreground">
+            <p class="text-base">
+              <strong class="text-foreground">Effective Date:</strong> 9 February
+              2026
+            </p>
+            <p class="text-base">
+              <strong class="text-foreground">Operated by:</strong> Ministry of Posts
+              and Telecommunications (MPTC), Kingdom of Cambodia
+            </p>
+          </div>
+        </header>
+
+        <!-- Introduction -->
+        <div class="space-y-4">
+          <p class="text-base md:text-lg text-foreground leading-relaxed">
+            This document combines:
+          </p>
+          <ol
+            class="list-decimal list-inside space-y-2 text-base md:text-lg text-foreground ml-4"
+          >
+            <li>User Agreement (Terms of Use)</li>
+            <li>Acceptable Use & Data Handling Policy</li>
+            <li>Privacy Policy</li>
+          </ol>
+          <p
+            class="text-base md:text-lg text-foreground leading-relaxed font-medium"
+          >
+            By creating an account, logging in, or using CTM, you confirm you
+            have read and agree to this document.
+          </p>
+        </div>
+
+        <!-- Section 1: User Agreement -->
+        <section class="space-y-6">
+          <h2 class="text-2xl md:text-3xl font-bold text-primary">
+            1) User Agreement (Terms of Use)
+          </h2>
+
+          <div class="space-y-5">
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                1.1 Purpose of CTM
+              </h3>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                CTM is a government application that supports administrative
+                work and digital services, including:
+              </p>
+              <ul
+                class="list-disc list-inside space-y-2 text-base md:text-lg text-foreground ml-4"
+              >
+                <li>Messaging and communication</li>
+                <li>Uploading and sharing media and documents</li>
+                <li>Notifications and service updates</li>
+                <li>Workflow/document coordination (where enabled)</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                1.2 Who may use CTM
+              </h3>
+              <p class="text-base md:text-lg text-foreground leading-relaxed">
+                CTM is for users authorized by MPTC and/or participating
+                institutions (government staff, authorized users, and approved
+                contractors). You must use CTM only for permitted purposes and
+                within your assigned access rights.
+              </p>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                1.3 Accounts and user responsibilities
+              </h3>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                You agree to:
+              </p>
+              <ul
+                class="list-disc list-inside space-y-2 text-base md:text-lg text-foreground ml-4"
+              >
+                <li>
+                  Provide accurate account information (email, user identifier,
+                  phone number when required)
+                </li>
+                <li>Keep your credentials secure and not share your account</li>
+                <li>
+                  Immediately report suspected unauthorized access or security
+                  incidents
+                </li>
+                <li>
+                  Follow institutional rules and official instructions when
+                  using CTM
+                </li>
+              </ul>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mt-3"
+              >
+                You are responsible for all actions taken through your account.
+              </p>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                1.4 Service availability and changes
+              </h3>
+              <p class="text-base md:text-lg text-foreground leading-relaxed">
+                CTM may be updated, modified, suspended, or temporarily
+                unavailable due to maintenance, security, or operational
+                reasons. We may update this document when needed. Continued use
+                of CTM after changes means you accept the updated version.
+              </p>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                1.5 Suspension or termination
+              </h3>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                We may suspend or terminate access if:
+              </p>
+              <ul
+                class="list-disc list-inside space-y-2 text-base md:text-lg text-foreground ml-4"
+              >
+                <li>You violate this document or related policies</li>
+                <li>Misuse or security risk is suspected</li>
+                <li>Your authorization ends or your role is removed</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 2: Acceptable Use & Data Handling Policy -->
+        <section class="space-y-6">
+          <h2 class="text-2xl md:text-3xl font-bold text-primary">
+            2) Acceptable Use & Data Handling Policy
+          </h2>
+
+          <div class="space-y-5">
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                2.1 Acceptable use rules
+              </h3>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                You must not:
+              </p>
+              <ul
+                class="list-disc list-inside space-y-2 text-base md:text-lg text-foreground ml-4"
+              >
+                <li>Access data you are not authorized to view</li>
+                <li>Attempt to bypass security controls or monitoring</li>
+                <li>Upload malware or harmful content</li>
+                <li>
+                  Use CTM for personal, commercial, or non-official purposes
+                </li>
+                <li>Harass, threaten, impersonate, or misuse chat features</li>
+                <li>Export or share CTM data outside authorized channels</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                2.2 Confidentiality and information handling
+              </h3>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                CTM may contain official and sensitive information. You must:
+              </p>
+              <ul
+                class="list-disc list-inside space-y-2 text-base md:text-lg text-foreground ml-4"
+              >
+                <li>
+                  Keep CTM information confidential and share only with
+                  authorized users
+                </li>
+                <li>
+                  Not share screenshots/documents/messages outside CTM without
+                  approval
+                </li>
+                <li>
+                  Follow your institution's document handling, classification,
+                  and retention rules
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                2.3 File and content rules
+              </h3>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                You are responsible for the content you upload or share. You
+                must:
+              </p>
+              <ul
+                class="list-disc list-inside space-y-2 text-base md:text-lg text-foreground ml-4"
+              >
+                <li>Upload only content needed for official work</li>
+                <li>Ensure you have permission to upload/share the content</li>
+                <li>
+                  Avoid uploading sensitive content unless required and
+                  permitted
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                2.4 Logging, monitoring, and audit
+              </h3>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                CTM may keep logs of key actions (such as login events, message
+                delivery status, file uploads, and administrative actions) for:
+              </p>
+              <ul
+                class="list-disc list-inside space-y-2 text-base md:text-lg text-foreground ml-4"
+              >
+                <li>Security and incident response</li>
+                <li>Troubleshooting and service improvement</li>
+                <li>Compliance and accountability</li>
+              </ul>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mt-3"
+              >
+                Access to logs is restricted to authorized personnel.
+              </p>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                2.5 Incident reporting
+              </h3>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                Report immediately if you suspect:
+              </p>
+              <ul
+                class="list-disc list-inside space-y-2 text-base md:text-lg text-foreground ml-4"
+              >
+                <li>Unauthorized account access</li>
+                <li>Phishing, malware, or unusual activity</li>
+                <li>Lost or compromised devices used for CTM</li>
+                <li>Data leakage or accidental sharing</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Privacy Policy -->
+        <section class="space-y-6">
+          <h2 class="text-2xl md:text-3xl font-bold text-primary">
+            3) Privacy Policy
+          </h2>
+
+          <div class="space-y-5">
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                3.1 Information we collect
+              </h3>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                CTM collects data to operate and improve services:
+              </p>
+              <ol
+                class="list-[lower-alpha] list-inside space-y-3 text-base md:text-lg text-foreground ml-4"
+              >
+                <li>
+                  <strong class="text-foreground">Personal information:</strong>
+                  Email address, user identifier (user ID), and phone number (when
+                  required by account creation or specific features).
+                </li>
+                <li>
+                  <strong class="text-foreground"
+                    >Messages and communications:</strong
+                  > In-app chat messages are processed through NetEase IM to enable
+                  real-time communication.
+                </li>
+                <li>
+                  <strong class="text-foreground">Media and files:</strong> Photos,
+                  videos, audio recordings, and documents you choose to capture,
+                  upload, or share within CTM.
+                </li>
+                <li>
+                  <strong class="text-foreground"
+                    >Device and usage information:</strong
+                  > Device identifiers (such as Android ID and device ID), app version,
+                  and technical information used to support messaging, notifications,
+                  security, and app functionality.
+                </li>
+                <li>
+                  <strong class="text-foreground">App performance data:</strong>
+                  Crash logs and diagnostic information to monitor performance, troubleshoot
+                  issues, and improve stability.
+                </li>
+              </ol>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                3.2 How we use your information
+              </h3>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                We use collected data to:
+              </p>
+              <ul
+                class="list-disc list-inside space-y-2 text-base md:text-lg text-foreground ml-4"
+              >
+                <li>
+                  Provide and operate CTM features (messaging, file/media
+                  sharing, notifications)
+                </li>
+                <li>Maintain, improve, secure, and troubleshoot CTM</li>
+                <li>Improve app stability and performance</li>
+                <li>
+                  Communicate with users about accounts, updates, and important
+                  service information
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                3.3 Data sharing and third-party services
+              </h3>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                We share limited data with trusted service providers only to
+                support CTM functionality:
+              </p>
+              <ul
+                class="list-disc list-inside space-y-2 text-base md:text-lg text-foreground ml-4"
+              >
+                <li>
+                  <strong class="text-foreground">NetEase IM</strong> – instant messaging
+                  services
+                </li>
+                <li>
+                  <strong class="text-foreground">UniPush</strong> – push notification
+                  delivery
+                </li>
+              </ul>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mt-3"
+              >
+                These providers process data on our behalf and must protect user
+                data in line with applicable data protection standards. We do
+                not sell personal data to third parties.
+              </p>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                3.4 Prominent disclosure and consent (push notifications)
+              </h3>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                CTM uses push notification services (including UniPush) to
+                deliver notifications and ensure reliability. In some cases, the
+                push service/SDK may process device information and may also
+                process Installed Applications information (list of installed
+                apps) depending on SDK behavior and configuration.
+              </p>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                To meet platform policy requirements:
+              </p>
+              <ul
+                class="list-disc list-inside space-y-2 text-base md:text-lg text-foreground ml-4"
+              >
+                <li>
+                  CTM will show an in-app prominent disclosure explaining what
+                  data is collected, why it is needed, and who receives it.
+                </li>
+                <li>
+                  CTM will request your affirmative consent (for example, tap
+                  "Agree") before any such collection/transmission begins.
+                </li>
+                <li>
+                  If you do not consent, push notifications may be unavailable.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                3.5 Data security
+              </h3>
+              <p class="text-base md:text-lg text-foreground leading-relaxed">
+                We implement appropriate technical and organizational measures,
+                including encryption, to protect user data during transmission
+                and storage. Access is restricted to authorized personnel and
+                approved service providers only.
+              </p>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                3.6 Data retention
+              </h3>
+              <p class="text-base md:text-lg text-foreground leading-relaxed">
+                We retain user data only as long as needed to provide CTM
+                services and support and to meet operational, audit, and
+                compliance needs. Retention may vary by data type and
+                institutional requirements.
+              </p>
+            </div>
+
+            <div>
+              <h3
+                class="text-xl md:text-2xl font-semibold text-foreground mb-3"
+              >
+                3.7 User rights and choices
+              </h3>
+              <p
+                class="text-base md:text-lg text-foreground leading-relaxed mb-3"
+              >
+                Users may:
+              </p>
+              <ul
+                class="list-disc list-inside space-y-2 text-base md:text-lg text-foreground ml-4"
+              >
+                <li>
+                  Access, update, or delete personal information (where CTM
+                  supports it)
+                </li>
+                <li>
+                  Manage permissions through device settings (for example,
+                  notification permissions)
+                </li>
+                <li>Request assistance regarding data protection matters</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: Contact Information -->
+        <section class="space-y-6 border-t border-border pt-6">
+          <h2 class="text-2xl md:text-3xl font-bold text-primary">
+            4) Contact Information
+          </h2>
+          <div class="space-y-4">
+            <p class="text-base md:text-lg text-foreground leading-relaxed">
+              If you have questions or concerns about CTM, this document, or
+              data protection:
+            </p>
+            <div class="bg-muted/50 rounded-lg p-6 space-y-3">
+              <p class="text-base md:text-lg text-foreground">
+                <strong class="font-semibold"
+                  >Ministry of Posts and Telecommunications (MPTC)</strong
+                >
+              </p>
+              <p class="text-base md:text-lg text-foreground">
+                <strong class="font-semibold">Email:</strong>
+                <a
+                  href="mailto:CHHORLYHEANG-KONG@mptc.gov.kh"
+                  class="text-primary hover:underline"
+                >
+                  CHHORLYHEANG-KONG@mptc.gov.kh
+                </a>
+              </p>
+              <p class="text-base md:text-lg text-foreground">
+                <strong class="font-semibold">Phone:</strong>
+                <a href="tel:+85577630182" class="text-primary hover:underline">
+                  +855 77 630 182
+                </a>
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+    </div>
+  </section>
+</Layout>
