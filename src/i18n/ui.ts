@@ -88,6 +88,7 @@ export const ui = {
       "Building 13, Monivong Blvd, Srah Chak, Daun Penh, Phnom Penh, Cambodia 120210",
     "footer.description.5": "Ministry of Post and Telecommunications",
     "footer.description.6": "Powered By",
+    "footer.privacyPolicy": "Privacy Policy",
   },
 
   km: {
@@ -165,5 +166,6 @@ export const ui = {
       "អគារលេខ ១៣ មហាវិថីព្រះមុនីវង្ស សង្កាត់ស្រះចក ខណ្ឌដូនពេញ រាជធានីភ្នំពេញ ១២០២១០",
     "footer.description.5": "ក្រសួងប្រៃសណីយ៍ និងទូរគមនាគមន៍",
     "footer.description.6": "អភិវឌ្ឍដោយ",
+    "footer.privacyPolicy": "គោលការណ៍ឯកជនភាព",
   },
 } as const;
