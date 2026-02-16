@@ -1,0 +1,28 @@
+---
+import thumbnail from "@/assets/frame.png";
+
+import { languages } from "@/i18n/ui";
+import { useTranslations } from "@/i18n/utils";
+import type { TypeLang } from "@/lib/types";
+import { Image } from "astro:assets";
+
+import "../../../styles/global.css";
+
+export async function getStaticPaths() {
+  return Object.keys(languages).map((langKey) => {
+    return {
+      params: { lang: langKey as TypeLang },
+    };
+  });
+}
+
+const { lang } = Astro.params;
+const t = useTranslations(lang);
+---
+
+<Image
+  src={thumbnail}
+  alt="Frame"
+  class="object-cover"
+  style="object-fit: cover;"
+/>
