@@ -22,12 +22,12 @@ const t = useTranslations(lang);
       playsinline
       preload="auto"></video>
     <div
-      class="absolute inset-0 z-10 w-full h-full bg-gradient-to-r from-white/90 to-transparent"
+      class="absolute inset-0 z-10 w-full h-full bg-gradient-to-r from-white to-transparent"
     >
       <div
         class="container h-full flex flex-col justify-center space-y-3 sm:space-y-4 px-4"
       >
-        <header class="space-y-2 sm:space-y-4">
+        <header class="space-y-2 sm:space-y-4 text-shadow-2xs">
           <h1
             class="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight"
           >
@@ -35,12 +35,14 @@ const t = useTranslations(lang);
             <br />
             {t("hero.title.2")}
           </h1>
-          <p class="text-sm sm:text-base text-muted-foreground italic">
+          <p
+            class="text-sm sm:text-base text-muted-foreground italic text-shadow-2xs"
+          >
             {t("hero.quote")}
           </p>
         </header>
         <article
-          class="text-sm sm:text-base text-foreground max-w-full sm:max-w-xl md:max-w-2xl"
+          class="text-base text-foreground max-w-full sm:max-w-xl md:max-w-2xl text-shadow-2xs"
         >
           {t("hero.description")}
         </article>

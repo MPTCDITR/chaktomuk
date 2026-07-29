@@ -22,7 +22,7 @@ const languageSwitcherHref = `/${targetLang}${currentRoute === "/" ? "" : curren
 <a
   title={`Switch to ${targetLangLabel}`}
   href={languageSwitcherHref}
-  class="rounded-full border border-primary"
+  class="rounded-full border border-primary hover:opacity-80 transition-opacity duration-300"
 >
   <Image
     src={targetFlag}
